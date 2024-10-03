@@ -690,6 +690,8 @@ func main() {
 }
 ```
 ### Output:
+![Screenshot 2024-10-03 074925](https://github.com/user-attachments/assets/75c40d98-64ff-4b73-b747-e83cd6f7bdde)
+
 ### Full code Screenshot:
 ![carbon (7)](https://github.com/user-attachments/assets/02f2077d-4fde-4908-bb11-617699a2dd94)
 
@@ -824,22 +826,6 @@ Program ini berfungsi untuk menghitung faktor dari bilangan bulat yang dimasukka
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-``
 
 
 
