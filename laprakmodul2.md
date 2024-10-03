@@ -203,8 +203,36 @@ func main() {
 ![carbon](https://github.com/user-attachments/assets/c359c2f5-d6fb-4357-aca2-412823f4b83a)
 
 ### Deskripsi Program : 
-Program ini berfungsi untuk membaca teks dari input pengguna dan kemudian mencetak teks yang sama ke layar. 
-Program sederhana ini bisa menjadi dasar dari program yang lebih kompleks untuk pengolahan data teks atau interaksi pengguna lainnya.
+Program ini mengimplementasikan proses dasar untuk membaca input teks dari pengguna dan kemudian menampilkan input tersebut di layar. 
+Ini bisa berguna dalam berbagai aplikasi, misalnya sebagai langkah awal untuk menerima nama pengguna atau data lain.
+
+### Algoritma Program
+
+- Inisialisasi:
+
+Import paket fmt untuk melakukan input dan output.
+
+- Deklarasi Variabel:
+
+Buat variabel nama untuk menyimpan input yang akan diberikan oleh pengguna.
+
+- Input:
+
+Gunakan fmt.Scanln(&nama) untuk mengambil input dari pengguna. Fungsi ini akan menunggu pengguna untuk mengetikkan sesuatu dan menekan Enter.
+
+- Output:
+
+Setelah mendapatkan input, gunakan fmt.Println(nama) untuk mencetak nilai dari variabel nama ke layar.
+
+### Cara Kerja Program
+
+- Membaca Input:
+
+Program dimulai dengan menunggu input dari pengguna. Ketika pengguna mengetikkan nama mereka dan menekan Enter, input tersebut akan disimpan ke dalam variabel nama.
+
+- Menampilkan Output:
+
+Setelah input diterima, program mencetak kembali nama tersebut menggunakan fmt.Println, sehingga pengguna bisa melihat apa yang mereka masukkan.
 
 ### 2. Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. 
 **Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. 
@@ -287,7 +315,35 @@ Urutan warna yang diharapkan adalah merah, kuning, hijau, dan ungu. Program akan
 Jika pengguna berhasil memasukkan urutan yang tepat untuk setiap percobaan, program akan menampilkan hasil BERHASIL: true. 
 Namun, jika ada satu percobaan yang salah, program akan langsung menghentikan percobaan dan menampilkan hasil BERHASIL: false.
 
+### Algoritma Program
 
+- Inisialisasi:
+
+Buat sebuah slice correctOrder yang berisi urutan warna yang benar: "merah", "kuning", "hijau", "ungu".
+Gunakan bufio.NewReader untuk memudahkan pembacaan input dari pengguna.
+Inisialisasi variabel success untuk melacak apakah semua percobaan berhasil.
+
+- Loop untuk Percobaan:
+
+Lakukan loop sebanyak 5 kali untuk menerima input dari pengguna.
+Tampilkan nomor percobaan ke layar.
+Baca input dari pengguna, hapus whitespace, dan pisahkan input menjadi array warna.
+
+- Verifikasi Input:
+
+Periksa apakah setiap warna dalam input sesuai dengan urutan yang benar.
+Jika ada kesalahan, set success menjadi false dan keluar dari loop.
+
+- Output Hasil:
+
+Setelah semua percobaan, tampilkan apakah semua percobaan berhasil atau tidak.
+
+### Cara Kerja Program
+- Program mulai dengan mendefinisikan urutan warna yang benar.
+- Menggunakan bufio.Reader, program meminta pengguna untuk memasukkan warna dalam format yang benar (spasi antara warna).
+- Setelah menerima input, program memotong spasi yang tidak perlu dan memisahkan warna berdasarkan spasi.
+- Program membandingkan setiap warna dengan urutan yang benar.
+- Jika semua warna cocok dalam semua percobaan, program menampilkan "BERHASIL: true". Jika ada kesalahan dalam satu percobaan, program menampilkan "BERHASIL: false".
 
 
 ### 3. Penjumlahan 5 Angka dari Input Pengguna
@@ -324,6 +380,31 @@ func main() {
 ### Deskripsi Program :
 Program ini meminta pengguna untuk memasukkan 5 angka integer, kemudian menghitung dan menampilkan hasil penjumlahan dari kelima angka tersebut. 
 Program menggunakan fungsi fmt.Scanln untuk membaca input angka dan menyimpan hasil penjumlahan dalam variabel hasil, lalu mencetak hasilnya.
+
+### Algoritma Program
+
+- Inisialisasi:
+
+Deklarasikan variabel a, b, c, d, dan e untuk menyimpan input dari pengguna.
+Deklarasikan variabel hasil untuk menyimpan hasil penjumlahan.
+
+- Input:
+
+Gunakan fmt.Scanln untuk membaca lima angka integer dari pengguna.
+
+- Proses:
+
+Jumlahkan semua angka yang telah diinput ke dalam variabel hasil.
+
+- Output:
+
+Tampilkan hasil penjumlahan ke layar dengan format yang jelas.
+
+### Cara Kerja Program
+- Program dimulai dengan mendeklarasikan variabel untuk menyimpan input pengguna.
+- Menggunakan fmt.Scanln, program meminta pengguna untuk memasukkan lima angka. Pengguna dapat memasukkan angka secara bersamaan, dipisahkan oleh spasi.
+- Setelah angka dibaca, program menjumlahkan kelima angka tersebut dan menyimpannya dalam variabel hasil.
+- Program kemudian mencetak hasil penjumlahan ke layar dengan format yang mudah dibaca.
 
 ### 4.Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:
 
@@ -503,6 +584,37 @@ func main() {
 Program ini menerima input berupa nilai numerik (float) dari pengguna, kemudian menentukan indeks nilai (A, B, C, D, E, atau F) berdasarkan rentang nilai yang sudah ditentukan. 
 Program ini menggunakan kondisi if-else untuk mengevaluasi nilai dan menampilkan indeks yang sesuai dengan input pengguna.
 
+### Algoritma Program
+
+- Inisialisasi:
+
+Deklarasikan variabel nam untuk menyimpan nilai numerik dengan tipe float32.
+Deklarasikan variabel nmk untuk menyimpan indeks huruf (string).
+
+- Input:
+
+Tampilkan pesan untuk meminta pengguna memasukkan nilai.
+Gunakan fmt.Scan untuk membaca input nilai dari pengguna.
+
+- Logika Penentuan Indeks:
+
+Gunakan serangkaian kondisi if-else untuk menentukan indeks huruf berdasarkan nilai yang dimasukkan:
+Jika nilai ≥ 80, indeksnya adalah "A".
+Jika nilai ≥ 70, indeksnya adalah "B".
+Jika nilai ≥ 60, indeksnya adalah "C".
+Jika nilai ≥ 50, indeksnya adalah "D".
+Jika nilai ≥ 40, indeksnya adalah "E".
+Jika nilai < 40, indeksnya adalah "F".
+
+- Output:
+
+Tampilkan hasil indeks huruf berdasarkan nilai yang dimasukkan.
+
+### Cara Kerja Program
+- Program dimulai dengan mendeklarasikan dua variabel: satu untuk menyimpan nilai numerik dan satu lagi untuk menyimpan indeks huruf.
+- Program meminta pengguna untuk memasukkan nilai dengan menggunakan fmt.Print dan membaca input menggunakan fmt.Scan.
+- Setelah menerima input, program mengevaluasi nilai tersebut dengan serangkaian kondisi if-else untuk menentukan indeks huruf yang sesuai.
+- Program kemudian mencetak hasil indeks huruf ke layar.
 
 ## Unguided 
 
@@ -570,6 +682,33 @@ func main() {
 Program ini berfungsi untuk menerima input dari pengguna berupa nama-nama bunga, menggabungkan nama-nama tersebut dalam satu string yang disebut "pita", serta menghitung jumlah bunga yang dimasukkan. 
 Pengguna bisa memasukkan nama bunga secara berulang hingga mengetik "SELESAI", yang menandakan akhir dari input.
 
+### Algoritma Program
+
+- Inisialisasi:
+
+Deklarasikan variabel pita untuk menyimpan gabungan nama-nama bunga.
+Deklarasikan variabel banyakBunga untuk menghitung jumlah bunga yang dimasukkan.
+
+- Loop untuk Input:
+
+Gunakan loop for tanpa batas untuk terus meminta input dari pengguna.
+Minta pengguna untuk memasukkan nama bunga, dengan pesan yang menunjukkan bahwa mereka dapat mengetik "SELESAI" untuk menghentikan input.
+
+- Pengecekan Input:
+
+Jika pengguna mengetik "SELESAI", keluar dari loop.
+Jika pita tidak kosong, tambahkan pemisah " – " sebelum menambahkan nama bunga baru.
+Tambahkan nama bunga ke variabel pita dan tingkatkan banyakBunga setiap kali bunga baru dimasukkan.
+
+- Output:
+
+Setelah loop selesai, tampilkan hasil akhir, yaitu nama-nama bunga yang dimasukkan dan jumlah total bunga.
+
+### Cara Kerja Program
+- Program mulai dengan mendeklarasikan dua variabel untuk menyimpan nama bunga dan jumlah bunga.
+- Dalam loop, program meminta pengguna untuk memasukkan nama bunga. Jika pengguna mengetik "SELESAI", loop akan berhenti.
+- Setiap nama bunga yang dimasukkan akan ditambahkan ke variabel pita. Jika pita sudah berisi nama bunga sebelumnya, program akan menambahkan pemisah " – ".
+- Setelah keluar dari loop, program mencetak daftar nama bunga dan jumlah bunga yang dimasukkan.
 
 ### 2. Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih.
 **Setiap hari Pak Andi membawa banyak barang belanjaan dari pasar dengan mengendarai sepeda motor. Barang belanjaan tersebut dibawa dalam kantong terpal di kiri-kanan motor. Sepeda motor tidak akan oleng jika selisih berat barang di kedua kantong sisi tidak lebih dari 9 kg.
@@ -657,6 +796,46 @@ func main() {
 Program ini berfungsi untuk menentukan apakah sepeda motor milik Pak Andi akan oleng (tidak stabil) berdasarkan berat belanjaan yang dimasukkan ke dalam dua kantong. 
 Pengguna dapat memasukkan berat belanjaan secara berulang, dan program akan memberikan informasi apakah sepeda motor akan oleng atau tidak berdasarkan beberapa kondisi yang ditentukan.
 
+### Algoritma Program
+
+- Inisialisasi:
+
+Gunakan bufio untuk membaca input pengguna dengan efisien.
+Mulai loop untuk meminta input dari pengguna secara berulang.
+
+- Input:
+
+Tampilkan prompt untuk meminta pengguna memasukkan berat dua kantong.
+Baca input pengguna dan hapus karakter whitespace yang tidak perlu.
+
+- Validasi Input:
+
+Pisahkan input berdasarkan spasi dan cek apakah terdapat dua angka.
+Jika tidak, tampilkan pesan kesalahan dan lanjutkan ke iterasi berikutnya.
+
+- Konversi dan Pengecekan Berat:
+
+Konversi input dari string ke float64 menggunakan strconv.ParseFloat.
+Jika salah satu berat negatif, tampilkan bahwa sepeda tidak oleng dan keluar dari loop.
+Jika total berat lebih dari 150 kg, tampilkan bahwa sepeda tidak oleng dan keluar dari loop.
+
+- Hitung Selisih:
+
+Hitung selisih berat antara kedua kantong dan ubah menjadi nilai absolut jika negatif.
+Jika selisih lebih dari atau sama dengan 9 kg, tampilkan bahwa sepeda akan oleng. Jika tidak, tampilkan bahwa sepeda tidak oleng.
+
+- Output Akhir:
+
+Tampilkan pesan bahwa proses telah selesai setelah loop keluar.
+
+### Cara Kerja Program
+- Program dimulai dengan mendeklarasikan reader untuk membaca input.
+- Dalam loop, program meminta pengguna untuk memasukkan berat dua kantong.
+- Program memvalidasi input dan memisahkan angka-angka menjadi dua variabel.
+- Setelah konversi, program melakukan pengecekan untuk menentukan apakah sepeda motor akan oleng berdasarkan kriteria yang telah ditentukan.
+- Hasilnya dicetak ke layar untuk setiap iterasi input, dan jika kondisi tertentu terpenuhi (seperti berat negatif atau total berat lebih dari 150 kg), loop akan berhenti.
+
+
 ### 3. Diberikan sebuah persamaan sebagai berikut ini.
 
 ![image](https://github.com/user-attachments/assets/d7e30bf0-2cca-46fa-b2a4-2c3e2baae551)
@@ -699,6 +878,31 @@ func main() {
 Program ini berfungsi untuk menghitung nilai dari fungsi matematis 𝑓(𝐾) berdasarkan input yang diberikan oleh pengguna. 
 Pengguna diminta untuk memasukkan nilai 𝐾 dan program akan menghitung serta menampilkan nilai 𝑓(𝐾) dengan presisi tinggi.
 
+### Algoritma Program
+
+- Inisialisasi:
+
+Deklarasikan variabel k dengan tipe float64 untuk menyimpan input dari pengguna.
+
+- Input:
+
+Tampilkan pesan untuk meminta pengguna memasukkan nilai 𝐾
+Gunakan fmt.Scanln untuk membaca nilai 𝐾 dari input pengguna.
+
+- Hitung Fungsi:
+
+Hitung nilai 
+𝑓(𝐾) menggunakan rumus yang telah ditentukan.
+
+- Output:
+
+Tampilkan hasil perhitungan dengan format yang menunjukkan 10 angka di belakang koma.
+
+### Cara Kerja Program
+- Program mulai dengan mendeklarasikan variabel k untuk menyimpan nilai yang diinputkan oleh pengguna.
+- Program kemudian meminta pengguna untuk memasukkan nilai 𝐾
+- Setelah menerima input, program menghitung 𝑓(𝐾) menggunakan rumus yang telah ditetapkan.
+- Program mencetak hasilnya ke layar dengan presisi 10 angka di belakang koma.
 
 ### 4. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BiayaPos untuk menghitung biaya pengiriman tersebut dengan ketentuan sebagai berikut!
 **Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg.
@@ -758,6 +962,36 @@ func main() {
 ### Deskripsi Program :
 Program ini berfungsi untuk menghitung biaya pengiriman parsel berdasarkan beratnya dalam gram. 
 Program ini meminta pengguna untuk memasukkan berat parsel, kemudian menghitung biaya pengiriman berdasarkan berat tersebut dan menampilkan hasilnya dengan jelas.
+
+### Algoritma Program
+
+- Inisialisasi:
+
+Deklarasikan fungsi hitungBiaya yang menerima berat parsel dalam gram sebagai parameter dan mengembalikan biaya pengiriman per kilogram, biaya pengiriman untuk sisa gram, dan berat dalam kilogram.
+
+- Hitung Berat dan Biaya:
+
+Dalam fungsi hitungBiaya:
+Hitung berat dalam kilogram dan sisa gram.
+Hitung biaya pengiriman untuk berat dalam kilogram (setiap kilogram dikenakan biaya Rp 10.000).
+Hitung biaya pengiriman untuk sisa gram dengan ketentuan tertentu:
+Jika sisa lebih dari atau sama dengan 500 gram, dikenakan biaya Rp 5 per gram.
+Jika sisa lebih dari 0 dan berat total (kg) tidak lebih dari 10, dikenakan biaya Rp 15 per gram.
+Jika sisa tidak memenuhi kondisi di atas, biaya untuk sisa gram adalah 0.
+
+- Input Pengguna:
+
+Minta pengguna untuk memasukkan berat parsel dalam gram.
+
+- Output:
+
+Tampilkan berat total (dalam kg dan gram), total biaya pengiriman, dan rincian biaya per kilogram dan biaya sisa gram.
+
+### Cara Kerja Program
+- Program dimulai dengan mendeklarasikan fungsi hitungBiaya.
+- Fungsi ini menghitung biaya berdasarkan berat parsel yang dimasukkan oleh pengguna.
+- Di dalam fungsi main, pengguna diminta untuk memasukkan berat parsel.
+- Setelah itu, fungsi hitungBiaya dipanggil untuk mendapatkan biaya pengiriman, yang kemudian ditampilkan ke layar.
 
 ### 5. Buatlah program yang menerima input sebuah bilangan bulat b dan b > 1. Program harus dapat mencari dan menampilkan semua faktor dari bilangan tersebut!
 **Sebuah bilangan bulat b memiliki faktor bilangan f > 0 jika f habis membagi b. Contoh: 2 merupakan faktor dari bilangan 6 karena 6 habis dibagi 2.
@@ -823,6 +1057,32 @@ func main() {
 ### Deskripsi Program :
 Program ini berfungsi untuk menghitung faktor dari bilangan bulat yang dimasukkan oleh pengguna serta menentukan apakah bilangan tersebut adalah bilangan prima atau bukan.
 
+### Algoritma Program
+
+- Input:
+
+Program meminta pengguna untuk memasukkan sebuah bilangan bulat.
+
+- Mencetak Faktor:
+
+Menggunakan loop dari 1 hingga bilangan yang dimasukkan untuk menemukan dan mencetak semua faktor.
+Jika bilangan dapat dibagi tanpa sisa oleh angka dalam loop, maka angka tersebut adalah faktor.
+
+- Pengecekan Bilangan Prima:
+
+Jika bilangan kurang dari atau sama dengan 1, maka bilangan tersebut bukan bilangan prima.
+Untuk bilangan lebih dari 1, program akan melakukan loop dari 2 hingga akar bilangan tersebut untuk mencari pembagi.
+Jika ditemukan pembagi lain selain 1 dan bilangan itu sendiri, maka bilangan tersebut bukan bilangan prima.
+
+- Output:
+
+Menampilkan semua faktor dari bilangan dan menyatakan apakah bilangan tersebut adalah bilangan prima.
+
+### Cara Kerja Program
+- Program dimulai dengan mendeklarasikan variabel b untuk menyimpan input bilangan bulat dari pengguna.
+- Setelah pengguna memasukkan bilangan, program akan mencetak faktor-faktor bilangan tersebut.
+- Program kemudian memeriksa apakah bilangan tersebut adalah bilangan prima.
+- Hasil akhir dicetak ke layar.
 
 
 
