@@ -657,11 +657,11 @@ func main() {
 Program ini berfungsi untuk menentukan apakah sepeda motor milik Pak Andi akan oleng (tidak stabil) berdasarkan berat belanjaan yang dimasukkan ke dalam dua kantong. 
 Pengguna dapat memasukkan berat belanjaan secara berulang, dan program akan memberikan informasi apakah sepeda motor akan oleng atau tidak berdasarkan beberapa kondisi yang ditentukan.
 
-### 3. Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di bawah.
+### 3. Diberikan sebuah persamaan sebagai berikut ini.
+
 ![image](https://github.com/user-attachments/assets/d7e30bf0-2cca-46fa-b2a4-2c3e2baae551)
+
 **Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di atas.
-Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read):
-Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di atas.
 Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read):**
 
 ![image](https://github.com/user-attachments/assets/d870a04f-d59a-4723-8ee5-8e1dc219ec11)
