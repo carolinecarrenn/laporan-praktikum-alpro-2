@@ -347,7 +347,9 @@ a. Keluaran jika nam adalah 80.1
 
 Jika nilai nam adalah 80.1, program akan mengecek kondisi apakah nilai tersebut lebih besar dari 80. Karena 80.1 memang lebih besar dari 80, maka nilai indeks yang akan diberikan adalah "A". 
 Dengan demikian, keluaran dari program tersebut adalah:
+
 ![Screenshot 2024-10-03 095027](https://github.com/user-attachments/assets/8c848f91-63e2-43a5-986e-2b67e5240368)
+
 Hasil keluaran ini sudah sesuai dengan spesifikasi soal, karena nilai 80.1 memang berada di rentang nilai untuk indeks "A".
 
 b. Kesalahan pada program
@@ -404,7 +406,9 @@ func main() {
 }
 ```
 ### Source Code :
+
 **Sebelum Perbaikan**
+
 ```go
 package main
 
@@ -440,6 +444,7 @@ func main() {
 ```
 
 **Setelah Perbaikan**
+
 ```go
 package main
 
@@ -475,17 +480,23 @@ func main() {
 ```
 
 ### Output:
+
 **Sebelum Perbaikan**
+
 ![Screenshot 2024-10-02 190824](https://github.com/user-attachments/assets/436979d0-a574-4d9f-8f43-2857192e1d3a)
 
 **Setelah Perbaikan**
+
 ![Screenshot 2024-10-02 190645](https://github.com/user-attachments/assets/aa9ec8cd-5603-46a3-bf6a-f4ce712fe18a)
 
 ### Full code Screenshot:
+
 **Sebelum Perbaikan**
+
 ![carbon (4)](https://github.com/user-attachments/assets/34e0a35a-58f3-4103-bf25-e285f27528bc)
 
 **Setelah Perbaikan**
+
 ![carbon (3)](https://github.com/user-attachments/assets/22a979c2-0790-4e98-a935-4fdde0c334b7)
 
 ### Deskripsi Program :
