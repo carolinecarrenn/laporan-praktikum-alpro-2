@@ -26,7 +26,7 @@
 
 <p align="center">
   <strong>Dosen Pengampu:</strong><br>
-  Arif Amrulloh
+  Arif Amrulloh,S.Kom.,M.Kom.
 </p>
 
 <br>
@@ -40,14 +40,27 @@
 
 ------
 
+## Daftar Isi
+1. [Tujuan Praktikum](#tujuan-praktikum)
+2. [Dasar Teori](#dasar-teori)
+3. [Guided](#guided)
+4. [Unguided](#unguided)
+5. [Kesimpulan](#kesimpulan)
+6. [Daftar Pustaka](#daftar-pustaka)
+
+## Tujuan Praktikum
+1. Mahasiswa diharapkan memahami berbagai bentuk struktur kontrol seperti perulangan (`for`), pengkondisian (`if, else if, else, dan switch`), serta penggunaan kontrol lainnya seperti `break`, `continue`, dan `goto`.
+2. Mahasiswa mampu mengimplementasikan struktur kontrol tersebut dalam program Go, serta mengkombinasikannya untuk membangun alur logika program yang kompleks.
+3. Mahasiswa dapat mengenali dan menangani kondisi khusus (edge case) yang mungkin muncul dalam program, sehingga program dapat berjalan dengan benar untuk berbagai situasi input.
+   
 ## Dasar Teori
 Review struktur kontrol dalam bahasa Go (Golang) berkaitan dengan berbagai elemen yang digunakan untuk mengontrol aliran eksekusi program. 
-Struktur kontrol mengatur bagaimana blok kode tertentu dieksekusi berdasarkan kondisi atau perulangan. 
+Struktur kontrol mengatur bagaimana blok kode tertentu dieksekusi berdasarkan kondisi atau perulangan. [1]
 Berikut beberapa dasar teori dari struktur kontrol dalam bahasa Go:
 
 **1. Pernyataan Kondisional (`if, else if, else`)**
 
-- Digunakan untuk mengeksekusi blok kode tertentu jika kondisi tertentu terpenuhi.
+- Digunakan untuk mengeksekusi blok kode tertentu jika kondisi tertentu terpenuhi.[1]
 - Bentuk dasar:
 ```go
 if kondisi {
@@ -67,8 +80,8 @@ if nilai := hitungNilai(); nilai > 10 {
 
 **2. Pernyataan Switch (`Switch`)**
 
-- Alternatif dari beberapa pernyataan if else, mempermudah pembacaan kode.
-- Tidak seperti bahasa lain, switch Go secara otomatis tidak membutuhkan break untuk menghentikan eksekusi.
+- Alternatif dari beberapa pernyataan if else, mempermudah pembacaan kode.[1]
+- Tidak seperti bahasa lain, switch Go secara otomatis tidak membutuhkan break untuk menghentikan eksekusi.[1]
 - Bentuk dasar
 ```go
 switch ekspresi {
@@ -93,7 +106,7 @@ default:
 ```
 **3. Perulangan (`for`)**
    
-- Bahasa Go hanya memiliki satu jenis perulangan, yaitu for. Namun, for ini fleksibel dan dapat digunakan untuk berbagai bentuk perulangan.
+- Bahasa Go hanya memiliki satu jenis perulangan, yaitu for. Namun, for ini fleksibel dan dapat digunakan untuk berbagai bentuk perulangan.[1]
 - Bentuk dasar for
 ```go
 for i := 0; i < 10; i++ {
@@ -115,7 +128,7 @@ for index, value := range collection {
 
 **4. Pernyataan `break` dan `continue`**
 
-- `break` digunakan untuk menghentikan eksekusi dari perulangan atau `switch`
+- `break` digunakan untuk menghentikan eksekusi dari perulangan atau `switch`[1]
 ```go
 for i := 0; i < 10; i++ {
     if i == 5 {
@@ -133,7 +146,7 @@ for i := 0; i < 10; i++ {
 }
 ```
 **5. Pernyataan `goto`**
-- Go mendukung `goto`, meskipun jarang digunakan karena dapat membuat kode sulit diikuti. `goto` memindahkan eksekusi program ke label yang ditentukan.
+- Go mendukung `goto`, meskipun jarang digunakan karena dapat membuat kode sulit diikuti. `goto` memindahkan eksekusi program ke label yang ditentukan.[1]
 ```go
 func main() {
     i := 0
@@ -147,7 +160,7 @@ loop:
 ```
 
 **6. Pernyataan `Defer`**
-- `defer` digunakan untuk menunda eksekusi fungsi sampai fungsi yang menampung defer selesai.
+- `defer` digunakan untuk menunda eksekusi fungsi sampai fungsi yang menampung defer selesai.[1]
 ```go
 func contoh() {
     defer fmt.Println("Ini dieksekusi terakhir")
@@ -157,7 +170,7 @@ func contoh() {
 - `defer`sering digunakan untuk menutup resource seperti file atau koneksi jaringan, memastikan resource tersebut ditutup meskipun terjadi error.
 
 **7.  `Panic` dan `Recover`**
-- `panic` digunakan untuk menghentikan eksekusi program secara tiba-tiba. Biasanya digunakan untuk menangani kesalahan yang tidak bisa ditangani di runtime.
+- `panic` digunakan untuk menghentikan eksekusi program secara tiba-tiba. Biasanya digunakan untuk menangani kesalahan yang tidak bisa ditangani di runtime.[1]
 ```go
 panic("Terjadi kesalahan!")
 ```
@@ -1084,10 +1097,16 @@ Menampilkan semua faktor dari bilangan dan menyatakan apakah bilangan tersebut a
 - Program kemudian memeriksa apakah bilangan tersebut adalah bilangan prima.
 - Hasil akhir dicetak ke layar.
 
+## Kesimpulan 
+Berdasarkan hasil praktikum Review Struktur Kontrol pada bahasa pemrograman Go, dapat disimpulkan bahwa pemahaman tentang struktur kontrol sangat penting dalam membangun program yang efisien. 
+Dari praktikum ini, dapat disimpulkan sebagai berikut:
 
-
-
-
+1. Memahami berbagai jenis struktur kontrol seperti perulangan (`for`), pengkondisian (`if, else, switch`), serta kontrol alur lainnya (`break, continue, goto`), yang berfungsi untuk mengarahkan jalannya program sesuai kondisi.
+2. Mengimplementasikan struktur kontrol dengan benar dalam program untuk menyusun logika yang lebih dinamis dan mampu menangani berbagai skenario program.
+3. Mengoptimalkan penggunaan struktur kontrol sehingga dapat menulis kode yang lebih ringkas, efisien, dan mudah dipelihara sesuai dengan kebutuhan logika program.
+   
+## Daftar Pustaka
+[1] A. A. A. Donovan and B. W. Kernighan, *The Go Programming Language*. Boston, MA: Addison-Wesley, 2015.
 
 
 
