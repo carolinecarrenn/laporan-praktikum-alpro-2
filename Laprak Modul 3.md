@@ -55,22 +55,23 @@
    
 ## Dasar Teori
 **1. Dasar Fungsi dalam Bahasa Go**
-     - Fungsi adalah blok kode yang digunakan untuk melakukan tugas tertentu secara modular dan reusable. [1]
-     - Dalam bahasa Go, fungsi merupakan first-class citizens, yang berarti mereka dapat disimpan dalam variabel, diteruskan sebagai argumen ke fungsi lain, dan bahkan dikembalikan dari fungsi.[1]
+
+- Fungsi adalah blok kode yang digunakan untuk melakukan tugas tertentu secara modular dan reusable. [1]
+- Dalam bahasa Go, fungsi merupakan first-class citizens, yang berarti mereka dapat disimpan dalam variabel, diteruskan sebagai argumen ke fungsi lain, dan bahkan dikembalikan dari fungsi.[1]
 
 **2. Deklarasi Fungsi**
-     - Fungsi dideklarasikan menggunakan kata kunci `func`, diikuti oleh nama fungsi, parameter (jika ada), tipe kembalian (jika ada), dan blok kode yang akan dieksekusi.[2]
+- Fungsi dideklarasikan menggunakan kata kunci `func`, diikuti oleh nama fungsi, parameter (jika ada), tipe kembalian (jika ada), dan blok kode yang akan dieksekusi.[2]
 
 ```go
 func tambah(a int, b int) int {
     return a + b
 }
 ```
-  - Fungsi `tambah` di atas menerima dua parameter `a` dan `b` bertipe `int`, kemudian mengembalikan hasil penjumlahan keduanya sebagai `int`.
+- Fungsi `tambah` di atas menerima dua parameter `a` dan `b` bertipe `int`, kemudian mengembalikan hasil penjumlahan keduanya sebagai `int`.
 
 **3. Multiple Return Values (Pengembalian Banyak Nilai)**
-     - Go mendukung pengembalian lebih dari satu nilai dari suatu fungsi. [2]
-     - Ini sering digunakan, terutama saat kita ingin mengembalikan hasil operasi bersama error.[2]
+- Go mendukung pengembalian lebih dari satu nilai dari suatu fungsi. [2]
+- Ini sering digunakan, terutama saat kita ingin mengembalikan hasil operasi bersama error.[2]
 
 ```go
 func bagi(a, b int) (int, error) {
@@ -80,12 +81,12 @@ func bagi(a, b int) (int, error) {
     return a / b, nil
 }
 ```
-    - Fungsi `bagi` mengembalikan dua nilai: hasil pembagian dan pesan error. 
-    - Jika terjadi pembagian dengan nol, fungsi mengembalikan error.
+- Fungsi `bagi` mengembalikan dua nilai: hasil pembagian dan pesan error. 
+- Jika terjadi pembagian dengan nol, fungsi mengembalikan error.
 
 **4. Variadic Function (Fungsi dengan Argumen Tidak Terbatas)**
-     - Variadic function adalah fungsi yang dapat menerima jumlah argumen yang tidak terbatas. [1]
-     - Ini dicapai dengan menggunakan tiga titik `(...)` sebelum tipe parameter.[1]
+- Variadic function adalah fungsi yang dapat menerima jumlah argumen yang tidak terbatas. [1]
+- Ini dicapai dengan menggunakan tiga titik `(...)` sebelum tipe parameter.[1]
 
 ```go
 func jumlah(angka ...int) int {
@@ -97,10 +98,10 @@ func jumlah(angka ...int) int {
 }
 ```
 
-     - Fungsi `jumlah` dapat menerima sejumlah argumen integer dan menjumlahkannya.
+- Fungsi `jumlah` dapat menerima sejumlah argumen integer dan menjumlahkannya.
 
 **5. Anonymous Function (Fungsi Anonim)**
-     - Fungsi anonim adalah fungsi tanpa nama yang bisa didefinisikan secara langsung, sering kali digunakan untuk tugas sederhana atau sebagai callback.[1]
+- Fungsi anonim adalah fungsi tanpa nama yang bisa didefinisikan secara langsung, sering kali digunakan untuk tugas sederhana atau sebagai callback.[1]
 
 ```go
 func main() {
@@ -110,10 +111,10 @@ func main() {
 }
 ```
 
-     - Fungsi anonim ini langsung dieksekusi setelah didefinisikan.
+- Fungsi anonim ini langsung dieksekusi setelah didefinisikan.
 
 **6. Fungsi sebagai Argumen dan Nilai Kembalian**
-     - Fungsi dalam Go juga dapat diteruskan sebagai argumen ke fungsi lain atau dikembalikan sebagai nilai.[2]
+- Fungsi dalam Go juga dapat diteruskan sebagai argumen ke fungsi lain atau dikembalikan sebagai nilai.[2]
 
 ```go
 func apply(fn func(int) int, value int) int {
@@ -130,11 +131,11 @@ func main() {
 }
 ```
 
-     - Fungsi `apply` menerima fungsi `kaliDua` sebagai argumen dan menerapkannya pada nilai `5`.
+- Fungsi `apply` menerima fungsi `kaliDua` sebagai argumen dan menerapkannya pada nilai `5`.
 
 **7. Error Handling dengan Panic dan Recover**
-     - Dalam Go, mekanisme `panic` dan `recover` dapat digunakan untuk menangani error yang lebih fatal. [1]
-     - `panic` digunakan untuk menghentikan program, sedangkan `recover` untuk memulihkan eksekusi program dari kondisi panic.[1]
+- Dalam Go, mekanisme `panic` dan `recover` dapat digunakan untuk menangani error yang lebih fatal. [1]
+- `panic` digunakan untuk menghentikan program, sedangkan `recover` untuk memulihkan eksekusi program dari kondisi panic.[1]
 
 ```go
 func safeDivision(a, b int) {
@@ -155,7 +156,7 @@ func main() {
 }
 ```
 
-     - Fungsi `safeDivision` menggunakan `panic` untuk menghentikan eksekusi jika pembagian dengan nol terjadi, dan `recover` untuk menangani kondisi tersebut.
+- Fungsi `safeDivision` menggunakan `panic` untuk menghentikan eksekusi jika pembagian dengan nol terjadi, dan `recover` untuk menangani kondisi tersebut.
 
 
 ## Guided 
@@ -200,8 +201,25 @@ func permutasi(n, r int) int {
 ```
 
 ### Output:
+
+Pada terminal, pengguna memasukkan nilai 2 dan 5.
+- Karena 𝑎 = 2 dan 𝑏 = 5, kondisi if 𝑎 ≥ 𝑏 tidak terpenuhi (karena 2 < 5), sehingga program memanggil fungsi permutasi (5, 2).
+- Program kemudian menghitung permutasi P(5, 2) sebagai berikut:
+
+  ![image](https://github.com/user-attachments/assets/43df581b-b078-416b-a4b5-2a5ce5a42213)
+
+  - 5! = 5 × 4 × 3 × 2 × 1 = 120
+  - 3! = 3 × 2 × 1 = 6
+  
+  Sehingga:
+
+  ![image](https://github.com/user-attachments/assets/f12bfada-fb79-453b-a9ee-229d718d572d)
+
+**Output yang akan ditampilkan adalah :**
+
 ![image](https://github.com/user-attachments/assets/16014749-7c16-4263-83af-d636f6841c19)
 
+  
 ### Full code Screenshot :
 ![carbon](https://github.com/user-attachments/assets/dcb2673a-db1a-47b6-ad8b-1fe543ebd165)
 
@@ -229,20 +247,20 @@ Hasil dari permutasi dihitung menggunakan rumus 𝑃(𝑛,𝑟)= 𝑛!/(𝑛−�
   
 ### Cara Kerja Program :
 1. Memulai Program:
-- Program dimulai dan menunggu input dari pengguna. Pengguna diminta untuk memasukkan dua bilangan 𝑎 dan 𝑏.
+   - Program dimulai dan menunggu input dari pengguna. Pengguna diminta untuk memasukkan dua bilangan 𝑎 dan 𝑏.
 
 2. Memeriksa Kondisi:
-- Jika 𝑎 ≥ 𝑏, maka program menghitung 𝑃(𝑎,𝑏) dengan memanggil `fungsi permutasi(a, b)`.
-- Jika 𝑎 < 𝑏, program menghitung 𝑃(𝑏,𝑎).
+   - Jika 𝑎 ≥ 𝑏, maka program menghitung 𝑃(𝑎,𝑏) dengan memanggil `fungsi permutasi(a, b)`.
+   - Jika 𝑎 < 𝑏, program menghitung 𝑃(𝑏,𝑎).
 
 3. Menghitung Faktorial:
-- Program menggunakan fungsi faktorial untuk menghitung 𝑛! dan (𝑛−𝑟)!.
+   - Program menggunakan fungsi faktorial untuk menghitung 𝑛! dan (𝑛−𝑟)!.
 
 4. Menghitung Permutasi:
-- Setelah mendapatkan nilai faktorial 𝑛! dan (𝑛−𝑟)!, program membagi 𝑛! dengan (𝑛−𝑟)! untuk mendapatkan hasil permutasi.
+   - Setelah mendapatkan nilai faktorial 𝑛! dan (𝑛−𝑟)!, program membagi 𝑛! dengan (𝑛−𝑟)! untuk mendapatkan hasil permutasi.
 
 5. Menampilkan Hasil:
-- Program menampilkan hasil perhitungan permutasi ke layar.
+   - Program menampilkan hasil perhitungan permutasi ke layar.
 
 ### 2. Program fungsi yang digunakan untuk menghitung luas dan keliling sebuah persegi berdasarkan panjang sisi yang dimasukkan oleh pengguna
 
@@ -279,6 +297,12 @@ func main() {
 ```
 
 ### Output:
+- Jika pengguna memasukkan 12 sebagai panjang sisi persegi, maka :
+  - Luas akan dihitung sebagai : 12 x 12 = 144
+  - Keliling akan dihitung sebagai : 4 x 12 = 48
+
+**Output yang akan ditampilkan adalah :**
+
 ![image](https://github.com/user-attachments/assets/e6dfed63-5ea0-4969-8151-50565de818bb)
 
 ### Full code Screenshot :
@@ -322,7 +346,7 @@ sisi × sisi.
 Keluaran terdiri dari dua baris. Baris pertama adalah hasil permutasi dan kombinasi 𝒂 terhadap
 𝑐, sedangkan baris kedua adalah hasil permutasi dan kombinasi 𝑏 terhadap 𝑑.**
 
-**Catatan: permutasi (P) dan kombinasi (C) dari 𝑛 terhadap 𝑟 (𝑛 ≥ 𝑟) dapat dihitung dengan menggunakan persamaan berikut!**
+**Catatan: permutasi (𝑃) dan kombinasi (𝐶) dari 𝑛 terhadap 𝑟 (𝑛 ≥ 𝑟) dapat dihitung dengan menggunakan persamaan berikut!**
 
 ![image](https://github.com/user-attachments/assets/4978402f-272c-4bae-8ac4-e554843517a4)
 
@@ -415,6 +439,68 @@ func tampilkanHasil(a, b, c, d int) {
 ```
 
 ### Output:
+- Validasi Input 1 :
+  - Input yang diterima adalah :
+    - 𝑎 = 5
+    - 𝑏 = 10
+    - 𝑐 = 3
+    - 𝑑 = 10
+  - Program melakukan validasi :
+    - Apakah 𝑎 ≥ 𝑐 -> 5 ≥ 3 -> benar
+    - Apakah 𝑏 ≥ 𝑑 -> 10 ≥ 10 -> benar
+  - Karena kedua kondisi validasi terpenuhi, program akan melanjutkan perhitungan.
+ 
+- Perhitungan :
+  - Untuk 𝑃 (5,3) dan 𝐶 (5,3) :
+    - Permutasi 𝑃 (5,3)
+
+      ![image](https://github.com/user-attachments/assets/56925e5f-f2bf-4a78-ad69-ba67e31f38c2)
+        
+    - Kombinasi 𝐶 (5,3)
+
+      ![image](https://github.com/user-attachments/assets/a04f65fa-189d-423c-91db-5611cc130876)
+   
+  - Untuk 𝑃 (10,10) dan 𝐶 (10,10) :
+    - Permutasi 𝑃 (10,10)
+
+      ![image](https://github.com/user-attachments/assets/4ef873d0-0589-4f80-b4c2-e0da6956fb7c)
+      
+    - Kombinasi 𝐶 (10,10)
+
+      ![image](https://github.com/user-attachments/assets/0d63ed2f-aa2d-492b-9a91-e7877d084e40)
+
+- Validasi Input 2 :
+  - Input yang diterima adalah :
+    - 𝑎 = 8
+    - 𝑏 = 0
+    - 𝑐 = 2
+    - 𝑑 = 0
+  - Program melakukan validasi :
+    - Apakah 𝑎 ≥ 𝑐 -> 8 ≥ 2 -> benar
+    - Apakah 𝑏 ≥ 𝑑 -> 0 ≥ 0 -> benar
+  - Karena kedua kondisi validasi terpenuhi, program akan melanjutkan perhitungan.
+ 
+- Perhitungan :
+  - Untuk 𝑃 (8,2) dan 𝐶 (8,2) :
+    - Permutasi 𝑃 (8,2)
+
+      ![image](https://github.com/user-attachments/assets/9c28da85-7311-42a6-b6f1-670936059681)
+        
+    - Kombinasi 𝐶 (8,2)
+
+      ![image](https://github.com/user-attachments/assets/7c98a677-dfd5-475e-9a7b-3349b45f4167)
+      
+  - Untuk 𝑃 (0,0) dan 𝐶 (0,0) :
+    - Permutasi 𝑃 (0,0)
+
+      ![image](https://github.com/user-attachments/assets/571d3585-ee66-4895-86ce-99bd646e4d16)
+      
+    - Kombinasi 𝐶 (0,0)
+
+      ![image](https://github.com/user-attachments/assets/22708dac-bab0-46fe-b5d7-f780d1232f4f)
+
+**Output yang akan ditampilkan adalah :**
+
 ![image](https://github.com/user-attachments/assets/2273ecc7-2a49-40ea-bab1-60388191d030)
 
 ### Full code Screenshot :
@@ -465,10 +551,13 @@ Hasilnya ditampilkan dalam format yang rapi.
    - Program menghitung permutasi dan kombinasi menggunakan dua fungsi terpisah (`permutasi` dan `kombinasi`), lalu menampilkan hasil dalam bentuk formula matematika beserta hasil akhirnya.
      
 ### 2. Diberikan tiga buah fungsi matematika yaitu 𝑓 (𝑥) = 𝑥2 , 𝑔 (𝑥) = 𝑥 − 2 dan ℎ (𝑥) = 𝑥 + 1. Fungsi komposisi (𝑓𝑜𝑔𝑜ℎ)(𝑥) artinya adalah 𝑓(𝑔(ℎ (𝑥))).Tuliskan 𝑓 (𝑥), 𝑔 (𝑥), ℎ (𝑥) bentuk function.
+
 **Masukan** terdiri dari sebuah bilangan bulat 𝑎 , 𝑏 dan 𝑐 yang dipisahkan oleh spasi.
+
 **Keluaran** terdiri dari tiga baris. Baris pertama adalah (𝑓𝑜𝑔𝑜ℎ)(𝑎), baris kedua (𝑔𝑜ℎ𝑜𝑓)(𝑏), baris ketiga adalah (ℎ𝑜𝑓𝑜𝑔)(𝑐) !
 
 Contoh :
+
 ![image](https://github.com/user-attachments/assets/b1baeb3b-31f8-4846-8b36-14c59e714cce)
 
 ### Source Code :
@@ -515,6 +604,14 @@ func main() {
 ```
 
 ### Output:
+- Program pertama-tama meminta input nilai a, b, dan c dari pengguna.
+- Untuk masing-masing input, program menghitung dan menampilkan hasil komposisi fungsi yang berbeda:
+  - (𝑓𝑜𝑔𝑜ℎ)(𝑎) untuk 𝑎
+  - (𝑔𝑜ℎ𝑜𝑓)(𝑏) untuk 𝑏
+  - (ℎ𝑜𝑓𝑜𝑔)(𝑐) untuk 𝑐
+
+**Output yang akan ditampilkan adalah :**
+
 ![image](https://github.com/user-attachments/assets/5a63d7b3-eb2d-4838-aa28-785e3530c6b3)
 
 ### Full code Screenshot :
@@ -547,12 +644,14 @@ Program ini menggunakan konsep komposisi fungsi untuk menghitung hasil dari bebe
 3. Menampilkan Hasil:
    - Setelah komposisi fungsi selesai dihitung untuk setiap nilai 𝑎, 𝑏, dan 𝑐, program akan menampilkan hasil perhitungan tersebut di layar.
 
-### 3.Suatu lingkaran didefinisikan dengan koordinat titik pusat (𝑐𝑥, 𝑐𝑦) dengan radius 𝑟. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (𝑥, 𝑦) berdasarkan dua lingkaran tersebut.
+### 3. Suatu lingkaran didefinisikan dengan koordinat titik pusat (𝑐𝑥, 𝑐𝑦) dengan radius 𝑟. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (𝑥, 𝑦) berdasarkan dua lingkaran tersebut.
 **Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat.
 Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2".**
 
 Contoh :
+
 ![image](https://github.com/user-attachments/assets/5c0559d7-0487-43f3-8d6e-f9d6d095be5c)
+
 ![image](https://github.com/user-attachments/assets/a86ba834-47af-47ff-8953-281ee835f632)
 
 ### Source Code :
@@ -608,7 +707,21 @@ func main() {
 }
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/de2c0209-39f1-4ce7-9d1b-ce567d9304b3)
+- Berdasarkan hasil pemeriksaan, program menampilkan salah satu dari empat kemungkinan:
+  - Titik berada di dalam kedua lingkaran.
+  - Titik hanya berada di dalam Lingkaran 1.
+  - Titik hanya berada di dalam Lingkaran 2.
+  - Titik berada di luar kedua lingkaran.
+
+**Output yang akan ditampilkan adalah :**
+
+![Screenshot 2024-10-07 221817](https://github.com/user-attachments/assets/b759df05-68b4-46a6-8d38-9bcc888a0b0e)
+
+![Screenshot 2024-10-07 221929](https://github.com/user-attachments/assets/c16f1b97-ad9d-4c35-adff-6cc3d3be74b8)
+
+![Screenshot 2024-10-07 221845](https://github.com/user-attachments/assets/cae3133e-3131-495e-8118-67244c6ad394)
+
+![Screenshot 2024-10-07 222004](https://github.com/user-attachments/assets/b9ca1030-178d-4f40-87b3-d1bcb96ac435)
 
 ### Full code Screenshot :
 ![carbon (5)](https://github.com/user-attachments/assets/2fd4dc17-7d90-4548-a44e-75b97697d4c1)
@@ -651,4 +764,5 @@ Dari praktikum ini, dapat disimpulkan sebagai berikut:
 
 ## Daftar Pustaka
 [1] A. A. A. Donovan and B. W. Kernighan, *The Go Programming Language*. Boston, MA: Addison-Wesley, 2015.
+
 [2] W. Kennedy, B. Ketelsen, and E. St. Martin, *Go in Action*. Greenwich, CT: Manning Publications, 2016.
