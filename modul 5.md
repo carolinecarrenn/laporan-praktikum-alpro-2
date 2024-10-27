@@ -216,25 +216,26 @@ Program ini adalah program yang mencari semua faktor dari sebuah bilangan bulat 
 Program ini bekerja dengan menggunakan fungsi rekursif yang memeriksa setiap angka dari 1 hingga n (bilangan yang dimasukkan) untuk menentukan apakah angka tersebut adalah faktor dari n. Jika sebuah angka adalah faktor dari n, angka tersebut akan dimasukkan ke dalam daftar hasil dan ditampilkan.
 
 ### Algoritma Program :
-Input Bilangan:
+1. Input Bilangan:
+   - Minta pengguna untuk memasukkan bilangan bulat positif n yang faktornya ingin dicari.
 
-Minta pengguna untuk memasukkan bilangan bulat positif n yang faktornya ingin dicari.
-Panggil Fungsi Rekursif faktor:
+2. Panggil Fungsi Rekursif faktor:
+   - Panggil fungsi faktor dengan dua parameter:
+     - n, bilangan yang faktornya akan dicari.
+     - i, yang dimulai dari 1 sebagai nilai awal pemeriksaan faktor.
 
-Panggil fungsi faktor dengan dua parameter:
-n, bilangan yang faktornya akan dicari.
-i, yang dimulai dari 1 sebagai nilai awal pemeriksaan faktor.
-Fungsi faktor:
+3. Fungsi faktor:
+   - Fungsi ini mencari faktor dari bilangan n secara rekursif.
 
-Fungsi ini mencari faktor dari bilangan n secara rekursif.
-Basis Rekursi:
-Jika i > n, fungsi akan mengembalikan nil, yang menandakan akhir dari rekursi.
-Pemeriksaan Faktor:
-Jika n % i == 0, maka i adalah faktor dari n, dan ditambahkan ke dalam daftar hasil.
-Panggil faktor kembali dengan nilai i+1 untuk melanjutkan pencarian faktor hingga mencapai batas n.
-Cetak Hasil:
+4. Basis Rekursi:
+   - Jika `i > n`, fungsi akan mengembalikan nil, yang menandakan akhir dari rekursi.
 
-Setelah semua faktor ditemukan dan dikumpulkan dalam daftar, cetak daftar faktor tersebut ke layar.
+5. Pemeriksaan Faktor:
+   - Jika `n % i == 0`, maka i adalah faktor dari n, dan ditambahkan ke dalam daftar hasil.
+   - Panggil faktor kembali dengan nilai `i+1` untuk melanjutkan pencarian faktor hingga mencapai batas n.
+
+6. Cetak Hasil:
+   - Setelah semua faktor ditemukan dan dikumpulkan dalam daftar, cetak daftar faktor tersebut ke layar.
 
 ### Cara Kerja Program :
 Fungsi main:
@@ -309,34 +310,36 @@ Program ini adalah program yang meminta input berupa bilangan bulat positif n da
 Program ini menampilkan pola simetris yang dimulai dari n ke 1 dan kembali ke n.
 
 ### Algoritma Program :
-Menerima Input:
+1. Menerima Input:
+   - Minta pengguna untuk memasukkan bilangan n.
 
-Minta pengguna untuk memasukkan bilangan n.
-Panggil printRecursive dengan Parameter n:
-
-Fungsi printRecursive digunakan untuk mencetak urutan angka dari n ke 1, dan kembali lagi ke n.
-Fungsi Rekursif printRecursive(n):
-
-Basis Rekursi:
-Jika n adalah 1, cetak 1 dan akhiri rekursi dengan return.
-Langkah Rekursif:
-Cetak nilai n, lalu panggil printRecursive(n - 1) untuk melanjutkan ke angka berikutnya dalam urutan menurun.
-Setelah kembali dari pemanggilan rekursif, cetak n lagi untuk menghasilkan urutan menaik.
+2. Panggil `printRecursive` dengan Parameter n:
+   - Fungsi `printRecursive` digunakan untuk mencetak urutan angka dari n ke 1, dan kembali lagi ke n.
+     - Fungsi Rekursif `printRecursive(n)`:
+       - Basis Rekursi:
+         - Jika n adalah 1, cetak 1 dan akhiri rekursi dengan return.
+       - Langkah Rekursif:
+         - Cetak nilai n, lalu panggil `printRecursive(n - 1)` untuk melanjutkan ke angka berikutnya dalam urutan menurun.
+         - Setelah kembali dari pemanggilan rekursif, cetak n lagi untuk menghasilkan urutan menaik.
 
 ### Cara Kerja Program :
-Fungsi main:
-Fungsi utama main meminta pengguna untuk memasukkan bilangan bulat positif n, yang akan menentukan jumlah baris segitiga terbalik yang akan dicetak.
-Setelah menerima input, fungsi memanggil printStars(n) untuk mencetak pola segitiga terbalik bintang berdasarkan nilai n.
-Fungsi printStars:
-Fungsi printStars(n int) menerima satu parameter n, yang merupakan jumlah bintang yang akan dicetak pada baris pertama.
-Basis Rekursi:
-Jika n sama dengan 0, fungsi mengembalikan (exit) tanpa mencetak apa pun. Ini merupakan kondisi akhir yang menghentikan rekursi.
-Pencetakan Bintang:
-Fungsi melakukan looping dari 0 hingga n, mencetak karakter bintang (*) sebanyak n kali pada baris saat ini.
-Setelah mencetak bintang untuk baris tersebut, fungsi mencetak newline (fmt.Println()) untuk memindahkan ke baris berikutnya.
-Rekursi:
-Setelah mencetak bintang untuk baris saat ini, fungsi memanggil dirinya sendiri dengan parameter n - 1, yang berarti akan mencetak baris berikutnya dengan satu bintang lebih sedikit.
-Proses ini berlanjut hingga n mencapai 0, pada titik yang mana fungsi tidak lagi mencetak bintang.
+1. Fungsi main:
+   - Fungsi utama main meminta pengguna untuk memasukkan bilangan bulat positif n, yang akan menentukan jumlah baris segitiga terbalik yang akan dicetak.
+   - Setelah menerima input, fungsi memanggil `printStars(n)` untuk mencetak pola segitiga terbalik bintang berdasarkan nilai n.
+
+2. Fungsi printStars:
+   - Fungsi `printStars(n int)` menerima satu parameter n, yang merupakan jumlah bintang yang akan dicetak pada baris pertama.
+
+3. Basis Rekursi:
+   - Jika n sama dengan 0, fungsi mengembalikan (exit) tanpa mencetak apa pun. Ini merupakan kondisi akhir yang menghentikan rekursi.
+
+4. Pencetakan Bintang:
+   - Fungsi melakukan `looping dari 0 hingga n`, mencetak karakter bintang (*) sebanyak n kali pada baris saat ini.
+   - Setelah mencetak bintang untuk baris tersebut, fungsi mencetak newline `(fmt.Println())` untuk memindahkan ke baris berikutnya.
+
+5. Rekursi:
+   - Setelah mencetak bintang untuk baris saat ini, fungsi memanggil dirinya sendiri dengan parameter `n - 1`, yang berarti akan mencetak baris berikutnya dengan satu bintang lebih sedikit.
+   - Proses ini berlanjut hingga n mencapai 0, pada titik yang mana fungsi tidak lagi mencetak bintang.
 
 ### 5. Buatlah program yang mengimplementasikan rekursif untuk menampilkan barisan bilangan ganjil.
 
@@ -402,46 +405,46 @@ func printOddNumbers(i, n, columns int) {
 
 ### Deskripsi Program : 
 Program ini adalah program yang mencetak bilangan ganjil dari 1 hingga n dalam format tabel dengan 5 kolom per baris. 
-Dengan menggunakan fungsi printOddNumbers, program memastikan bahwa tabel rapi, dan baris yang tidak penuh akan diberi kolom kosong di akhir.
+Dengan menggunakan `fungsi printOddNumbers`, program memastikan bahwa tabel rapi, dan baris yang tidak penuh akan diberi kolom kosong di akhir.
 
 ### Algoritma Program :
-Menerima Input dari Pengguna:
-
-Program meminta pengguna memasukkan bilangan bulat positif n.
-Panggil printOddNumbers(1, n, 5):
-
-Fungsi ini dipanggil dengan parameter:
-1 sebagai bilangan awal yang akan dicetak.
-n sebagai batas maksimum bilangan ganjil.
-5 sebagai jumlah kolom per baris.
-Fungsi printOddNumbers(i, n, columns):
-
-Inisialisasi variabel count untuk menghitung jumlah angka pada baris saat ini.
-Gunakan loop for untuk mencetak bilangan ganjil dari 1 hingga n dengan penambahan 2 pada setiap iterasi (i += 2).
-Setiap bilangan ganjil dicetak dengan lebar tetap 6 karakter.
-Jika jumlah angka pada baris (count) sudah mencapai jumlah kolom yang ditentukan (5 kolom), maka program memulai baris baru.
-Mengisi Kolom yang Kosong:
-Jika baris terakhir belum penuh, maka tambahkan ruang kosong hingga kolom penuh sebelum menutup baris.
+1. Menerima Input dari Pengguna:
+   - Program meminta pengguna memasukkan bilangan bulat positif n.
+   - Panggil printOddNumbers(1, n, 5):
+     - Fungsi ini dipanggil dengan parameter:
+       - 1 sebagai bilangan awal yang akan dicetak.
+       - n sebagai batas maksimum bilangan ganjil.
+       - 5 sebagai jumlah kolom per baris.
+   - Fungsi `printOddNumbers(i, n, columns)`:
+     - Inisialisasi variabel count untuk menghitung jumlah angka pada baris saat ini.
+     - Gunakan loop for untuk mencetak bilangan ganjil dari 1 hingga n dengan penambahan 2 pada setiap iterasi `(i += 2)`.
+     - Setiap bilangan ganjil dicetak dengan lebar tetap 6 karakter.
+     - Jika jumlah angka pada baris (count) sudah mencapai jumlah kolom yang ditentukan (5 kolom), maka program memulai baris baru.
+   - Mengisi Kolom yang Kosong:
+     - Jika baris terakhir belum penuh, maka tambahkan ruang kosong hingga kolom penuh sebelum menutup baris.
 
 ### Cara Kerja Program :
-Fungsi main:
-Fungsi utama main mulai dengan mencetak header program "Bilangan Ganjil" dalam bentuk dekorasi ASCII.
-Fungsi kemudian meminta pengguna untuk memasukkan bilangan bulat positif n, yang akan menjadi batas maksimum untuk bilangan ganjil yang akan dicetak.
-Setelah menerima input, fungsi memanggil printOddNumbers(1, n, 5), untuk mencetak bilangan ganjil dari 1 hingga n dengan 5 kolom per baris.
-Program mencetak hasil dalam format tabel yang rapi dan terstruktur.
-Fungsi printOddNumbers:
-Fungsi printOddNumbers(i, n, columns) menerima tiga parameter: i (bilangan awal), n (bilangan batas atas), dan columns (jumlah kolom per baris).
-Inisialisasi:
-Fungsi ini menginisialisasi variabel count untuk menghitung jumlah bilangan ganjil yang sudah dicetak pada baris saat ini.
-Looping dan Pencetakan Bilangan Ganjil:
-Fungsi melakukan looping dari i hingga n, dengan penambahan 2 di setiap iterasi (i += 2), untuk mencetak bilangan ganjil.
-Setiap bilangan ganjil dicetak dengan format yang ditentukan (║ %-6d) untuk memastikan lebar yang konsisten.
-Pindah ke Baris Berikutnya:
-Setelah mencetak satu bilangan, fungsi memeriksa apakah jumlah bilangan pada baris (count) sudah mencapai jumlah kolom yang ditentukan (columns).
-Jika count adalah kelipatan dari columns, fungsi mencetak baris baru (║\n) untuk memulai baris baru.
-Mengisi Kolom Kosong:
-Setelah loop selesai, jika baris terakhir belum penuh (jumlah bilangan ganjil kurang dari jumlah kolom yang diinginkan), fungsi menambahkan ruang kosong (║ ) hingga kolom penuh.
-Baris terakhir ditutup dengan ║, menyelesaikan tabel.
+1. Fungsi main:
+   - Fungsi utama main mulai dengan mencetak header program `"Bilangan Ganjil"` dalam bentuk dekorasi ASCII.
+   - Fungsi kemudian meminta pengguna untuk memasukkan bilangan bulat positif n, yang akan menjadi batas maksimum untuk bilangan ganjil yang akan dicetak.
+   - Setelah menerima input, fungsi memanggil `printOddNumbers(1, n, 5)`, untuk mencetak bilangan ganjil dari 1 hingga n dengan 5 kolom per baris.
+   - Program mencetak hasil dalam format tabel yang rapi dan terstruktur.
+
+2. Fungsi printOddNumbers:
+   - Fungsi `printOddNumbers(i, n, columns)` menerima tiga parameter: `i (bilangan awal), n (bilangan batas atas), dan columns (jumlah kolom per baris).`
+
+3. Inisialisasi:
+   - Fungsi ini menginisialisasi variabel count untuk menghitung jumlah bilangan ganjil yang sudah dicetak pada baris saat ini.
+
+4. Looping dan Pencetakan Bilangan Ganjil:
+   - Fungsi melakukan looping dari i hingga n, dengan penambahan 2 di setiap iterasi (`i += 2`), untuk mencetak bilangan ganjil.
+   - Setiap bilangan ganjil dicetak dengan format yang ditentukan (║ %-6d) untuk memastikan lebar yang konsisten.
+   - Pindah ke Baris Berikutnya:
+     - Setelah mencetak satu bilangan, fungsi memeriksa apakah jumlah bilangan pada baris (count) sudah mencapai jumlah kolom yang ditentukan (columns).
+     - Jika count adalah kelipatan dari columns, fungsi mencetak baris baru (║\n) untuk memulai baris baru.
+   - Mengisi Kolom Kosong:
+     - Setelah loop selesai, jika baris terakhir belum penuh (jumlah bilangan ganjil kurang dari jumlah kolom yang diinginkan), fungsi menambahkan ruang kosong (║ ) hingga kolom penuh.
+     - Baris terakhir ditutup dengan ║, menyelesaikan tabel.
 
 ### 6. Buatlah program yang mengimplementasikan rekursif untuk mencari hasil pangkat dari dua buah bilangan.
 
@@ -504,38 +507,42 @@ func main() {
 ![carbon (13)](https://github.com/user-attachments/assets/b8ff7055-9beb-4cdc-a5f6-21e0c606fdac)
 
 ### Deskripsi Program : 
-Program ini adalah program yang menggunakan fungsi rekursif power untuk menghitung x^y dan meminta input x dan y dari pengguna. Hasil akhir perhitungan ditampilkan dalam format yang rapi di layar. 
+Program ini adalah program yang menggunakan fungsi rekursif power untuk menghitung `x^y` dan meminta input x dan y dari pengguna. 
+Hasil akhir perhitungan ditampilkan dalam format yang rapi di layar. 
 Program ini menekankan penggunaan rekursi untuk menghitung eksponen.
 
 ### Algoritma Program :
-Header Program:
+1. Header Program:
+   - Cetak header atau judul program.
+     
+2. Input dari Pengguna:
+   - Minta pengguna memasukkan bilangan bulat x sebagai dasar.
+   - Minta pengguna memasukkan bilangan bulat y sebagai pangkat.
 
-Cetak header atau judul program.
-Input dari Pengguna:
+3. Panggil Fungsi power(x, y):
+   - Fungsi ini menghitung x^y secara rekursif.
+   - Jika `y == 0`, fungsi langsung mengembalikan nilai 1.
+   - Jika `y > 0`, fungsi memanggil `power(x, y-1)` untuk mengalikan x hingga nilai y berkurang menjadi 0.
 
-Minta pengguna memasukkan bilangan bulat x sebagai dasar.
-Minta pengguna memasukkan bilangan bulat y sebagai pangkat.
-Panggil Fungsi power(x, y):
-
-Fungsi ini menghitung x^y secara rekursif.
-Jika y == 0, fungsi langsung mengembalikan nilai 1.
-Jika y > 0, fungsi memanggil power(x, y-1) untuk mengalikan x hingga nilai y berkurang menjadi 0.
-Cetak Hasil:
-
-Tampilkan hasil x^y kepada pengguna.
+4. Cetak Hasil:
+   - Tampilkan hasil x^y kepada pengguna.
 
 ### Cara Kerja Program :
-Fungsi main:
-Fungsi utama main menerima input dari pengguna berupa dua bilangan bulat: x (bilangan dasar) dan y (pangkat).
-Setelah menerima input, fungsi mencetak header program untuk memberikan konteks tentang apa yang akan dilakukan oleh program.
-Fungsi kemudian memanggil power(x, y) untuk menghitung nilai x^y secara rekursif.
-Hasil dari kalkulasi tersebut kemudian dicetak sebagai output, menampilkan hasil perhitungan pangkat ke pengguna.
-Fungsi power:
-Fungsi power bekerja secara rekursif untuk menghitung nilai pangkat dari x yang dipangkatkan dengan y.
-Basis Rekursi:
-Basis rekursi diatur sedemikian rupa sehingga jika nilai y sama dengan 0, fungsi akan mengembalikan nilai 1 (karena x^0 selalu sama dengan 1).
-Rekursi:
-Jika y lebih dari 0, fungsi melakukan penghitungan dengan memanggil dirinya sendiri: x * power(x, y-1).
-Setiap pemanggilan rekursif mengurangi nilai y hingga mencapai 0, sehingga fungsi power dapat menghitung nilai pangkat secara bertahap.
-Pengembalian Hasil:
-Setelah mencapai basis rekursi dan semua pemanggilan selesai, fungsi mengembalikan hasil perhitungan ke pemanggilan sebelumnya, hingga akhirnya hasil akhir (nilai x^y) dapat ditampilkan kepada pengguna.
+1. Fungsi main:
+   - Fungsi utama main menerima input dari pengguna berupa dua bilangan bulat: x (bilangan dasar) dan y (pangkat).
+   - Setelah menerima input, fungsi mencetak header program untuk memberikan konteks tentang apa yang akan dilakukan oleh program.
+   - Fungsi kemudian memanggil `power(x, y)` untuk menghitung nilai `x^y` secara rekursif.
+   - Hasil dari kalkulasi tersebut kemudian dicetak sebagai output, menampilkan hasil perhitungan pangkat ke pengguna.
+
+2. Fungsi power:
+   - Fungsi power bekerja secara rekursif untuk menghitung nilai pangkat dari x yang dipangkatkan dengan y.
+
+3. Basis Rekursi:
+   - Basis rekursi diatur sedemikian rupa sehingga jika nilai y sama dengan 0, fungsi akan mengembalikan nilai 1 (karena `x^0` selalu sama dengan `1`).
+
+4. Rekursi:
+   - Jika y lebih dari 0, fungsi melakukan penghitungan dengan memanggil dirinya sendiri: `x * power(x, y-1)`.
+   - Setiap pemanggilan rekursif mengurangi nilai y hingga mencapai 0, sehingga fungsi power dapat menghitung nilai pangkat secara bertahap.
+
+5. Pengembalian Hasil:
+   - Setelah mencapai basis rekursi dan semua pemanggilan selesai, fungsi mengembalikan hasil perhitungan ke pemanggilan sebelumnya, hingga akhirnya hasil akhir (`nilai x^y`) dapat ditampilkan kepada pengguna.
