@@ -1,4 +1,4 @@
-### 1. Deret fibonacci adalah sebuah deret dengan nilai suku ke-0 dan ke-1 adalah 0 dan 1, dan nilai suku ke-n selanjutnya adalah hasil penjumlahan dua suku sebelumnya. Secara umum dapat diformulasikan 𝑆𝑛 = 𝑆𝑛+1 + 𝑆𝑛+2 . Berikut ini adalah contoh nilai deret fibonacci hingga suku ke-10. Buatlah program yang mengimplementasikan fungsi rekursif pada deret fibonacci tersebut.
+### 1. Deret fibonacci adalah sebuah deret dengan nilai suku ke-0 dan ke-1 adalah 0 dan 1, dan nilai suku ke-n selanjutnya adalah hasil penjumlahan dua suku sebelumnya. Secara umum dapat diformulasikan 𝑆𝑛 = 𝑆𝑛-1 + 𝑆𝑛-2 . Berikut ini adalah contoh nilai deret fibonacci hingga suku ke-10. Buatlah program yang mengimplementasikan fungsi rekursif pada deret fibonacci tersebut.
 
 ![image](https://github.com/user-attachments/assets/674623a5-4fa7-4c72-a0ed-fdc155b88e7e)
 
@@ -238,20 +238,21 @@ Program ini bekerja dengan menggunakan fungsi rekursif yang memeriksa setiap ang
    - Setelah semua faktor ditemukan dan dikumpulkan dalam daftar, cetak daftar faktor tersebut ke layar.
 
 ### Cara Kerja Program :
-Fungsi main:
+1. Fungsi main:
+   - Fungsi utama main menerima input dari pengguna berupa bilangan bulat positif n.
+   - Setelah menerima input, fungsi memanggil faktor(`n, 1`) untuk menghitung semua faktor n dimulai dari i=1.
+   - Hasil dari faktor kemudian dicetak sebagai daftar faktor dari n.
 
-Fungsi utama main menerima input dari pengguna berupa bilangan bulat positif n.
-Setelah menerima input, fungsi memanggil faktor(n, 1) untuk menghitung semua faktor n dimulai dari i=1.
-Hasil dari faktor kemudian dicetak sebagai daftar faktor dari n.
-Fungsi faktor:
+2. Fungsi faktor:
+   - Fungsi faktor bekerja secara rekursif untuk memeriksa setiap nilai i dari 1 hingga n.
 
-Fungsi faktor bekerja secara rekursif untuk memeriksa setiap nilai i dari 1 hingga n.
-Pemeriksaan Faktor:
-Jika i adalah faktor dari n (artinya n % i == 0), maka i ditambahkan ke dalam hasil menggunakan fungsi append.
-Jika i bukan faktor dari n, fungsi akan melanjutkan dengan nilai i+1.
-Rekursi:
-Setelah memeriksa apakah i adalah faktor atau bukan, fungsi faktor akan memanggil dirinya sendiri dengan faktor(n, i+1).
-Ketika i > n, fungsi mengembalikan nil untuk mengakhiri rekursi.
+3. Pemeriksaan Faktor:
+   - Jika i adalah faktor dari n (artinya `n % i == 0`), maka i ditambahkan ke dalam hasil menggunakan fungsi append.
+   - Jika i bukan faktor dari n, fungsi akan melanjutkan dengan nilai `i+1`.
+
+4. Rekursi:
+   - Setelah memeriksa apakah i adalah faktor atau bukan, fungsi faktor akan memanggil dirinya sendiri dengan `faktor(n, i+1)`.
+   - Ketika `i > n`, fungsi mengembalikan nil untuk mengakhiri rekursi.
 
 ### 4. Buatlah program yang mengimplementasikan rekursif untuk menampilkan barisan bilangan tertentu.
 
