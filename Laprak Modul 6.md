@@ -1035,3 +1035,6 @@ Berdasarkan hasil praktikum, dapat disimpulkan bahwa pemahaman tentang konsep re
 3. Dengan memahami kapan menggunakan rekursif atau iterasi, mahasiswa dapat menulis kode yang lebih efisien dan sesuai dengan kebutuhan program.
 
 ## Daftar Pustaka
+[1] A. A. A. Donovan and B. W. Kernighan, *The Go Programming Language*. Boston, MA: Addison-Wesley, 2015.
+
+[2] W. Kennedy, B. Ketelsen, and E. St. Martin, *Go in Action*. Greenwich, CT: Manning Publications, 2016.
