@@ -483,42 +483,39 @@ func main() {
 Program ini adalah program yang menampilkan deret Fibonacci hingga indeks ke-10 dalam format tabel menggunakan fungsi rekursif. Deret Fibonacci adalah urutan angka yang dimulai dari 0 dan 1, di mana setiap angka berikutnya adalah hasil penjumlahan dari dua angka sebelumnya.
 
 ### Algoritma Program :
-Memulai Program:
+1. Memulai Program:
+   - Tampilkan header tabel menggunakan dekorasi ASCII untuk menampilkan informasi tentang deret Fibonacci.
 
-Tampilkan header tabel menggunakan dekorasi ASCII untuk menampilkan informasi tentang deret Fibonacci.
-Menampilkan Indeks N:
+2. Menampilkan Indeks N:
+   - Buat baris pertama tabel yang menampilkan indeks N dari 0 hingga 10.
 
-Buat baris pertama tabel yang menampilkan indeks N dari 0 hingga 10.
-Menampilkan Nilai Deret Fibonacci:
+3. Menampilkan Nilai Deret Fibonacci:
+   - Buat baris kedua tabel untuk menampilkan nilai dari deret Fibonacci untuk setiap indeks N yang dihitung menggunakan fungsi rekursif fibonacci.
 
-Buat baris kedua tabel untuk menampilkan nilai dari deret Fibonacci untuk setiap indeks N yang dihitung menggunakan fungsi rekursif fibonacci.
-Fungsi Rekursif fibonacci(n):
+4. Fungsi Rekursif fibonacci(n):
+   - Kondisi Dasar: Jika n adalah 0 atau 1, kembalikan nilai n (basis kasus rekursi).
+   - Langkah Rekursif: Jika n > 1, kembalikan hasil dari fibonacci(n-1) + fibonacci(n-2).
 
-Kondisi Dasar: Jika n adalah 0 atau 1, kembalikan nilai n (basis kasus rekursi).
-Langkah Rekursif: Jika n > 1, kembalikan hasil dari fibonacci(n-1) + fibonacci(n-2).
-Mengakhiri Program:
-
-Setelah tabel selesai ditampilkan, program berakhir.
+5. Mengakhiri Program:
+   - Setelah tabel selesai ditampilkan, program berakhir.
 
 ### Cara Kerja Program :
-Menampilkan Header Tabel:
+1. Menampilkan Header Tabel:
+   - Program dimulai dengan menampilkan header tabel yang berisi informasi tentang deret Fibonacci, menggunakan dekorasi ASCII untuk mempercantik tampilan.
 
-Program dimulai dengan menampilkan header tabel yang berisi informasi tentang deret Fibonacci, menggunakan dekorasi ASCII untuk mempercantik tampilan.
-Menampilkan Indeks N:
+2. Menampilkan Indeks N:
+   - Baris pertama tabel menampilkan kolom untuk indeks N. Program menggunakan loop untuk mencetak nilai dari 0 hingga 10 dalam format yang rapi.
 
-Baris pertama tabel menampilkan kolom untuk indeks N. Program menggunakan loop untuk mencetak nilai dari 0 hingga 10 dalam format yang rapi.
-Menghitung dan Menampilkan Nilai Deret Fibonacci:
+3. Menghitung dan Menampilkan Nilai Deret Fibonacci:
+   - Baris kedua tabel menampilkan kolom untuk nilai deret Fibonacci (Sn). Program menggunakan loop yang sama untuk memanggil fungsi fibonacci(i) untuk setiap indeks dari 0 hingga 10, dan menampilkan hasilnya.
 
-Baris kedua tabel menampilkan kolom untuk nilai deret Fibonacci (Sn). Program menggunakan loop yang sama untuk memanggil fungsi fibonacci(i) untuk setiap indeks dari 0 hingga 10, dan menampilkan hasilnya.
-Proses dalam Fungsi Rekursif fibonacci(n):
+4. Proses dalam Fungsi Rekursif fibonacci(n):
+   - Fungsi fibonacci(n) memeriksa nilai n. Jika n adalah 0 atau 1, fungsi langsung mengembalikan nilai n.
+   - Jika n lebih besar dari 1, fungsi memanggil dirinya sendiri secara rekursif untuk menghitung fibonacci(n-1) dan fibonacci(n-2), hingga mencapai kondisi dasar.
 
-Fungsi fibonacci(n) memeriksa nilai n. Jika n adalah 0 atau 1, fungsi langsung mengembalikan nilai n.
-Jika n lebih besar dari 1, fungsi memanggil dirinya sendiri secara rekursif untuk menghitung fibonacci(n-1) dan fibonacci(n-2), hingga mencapai kondisi dasar.
-Mengakhiri Program:
-
-Setelah semua nilai Fibonacci dicetak dalam tabel, program menyelesaikan proses dan berhenti. Tabel ditutup dengan dekorasi ASCII yang sesuai.
-
-     
+5. Mengakhiri Program:
+   - Setelah semua nilai Fibonacci dicetak dalam tabel, program menyelesaikan proses dan berhenti. Tabel ditutup dengan dekorasi ASCII yang sesuai.
+  
 ### 2. Buatlah sebuah program yang digunakan untuk menampilkan pola bintang berikut ini dengan menggunakan fungsi rekursif. N adalah masukan dari user.
 
 **Contoh masukan dan keluaran:**
@@ -565,42 +562,37 @@ func main() {
 Program ini adalah program yang mencetak pola bintang berbentuk segitiga terbalik berdasarkan input pengguna. Program menggunakan fungsi rekursif untuk mencetak pola ini, di mana setiap baris memiliki jumlah bintang yang berkurang satu dibandingkan baris sebelumnya.
 
 ### Algoritma Program :
-Memulai Program:
+1. Memulai Program:
+   - Program dimulai dengan mendefinisikan fungsi printStars yang akan digunakan untuk mencetak pola bintang.
 
-Program dimulai dengan mendefinisikan fungsi printStars yang akan digunakan untuk mencetak pola bintang.
-Menerima Input dari Pengguna:
+2. Menerima Input dari Pengguna:
+   - Minta pengguna untuk memasukkan nilai n, yang akan digunakan sebagai tinggi segitiga terbalik.
 
-Minta pengguna untuk memasukkan nilai n, yang akan digunakan sebagai tinggi segitiga terbalik.
-Fungsi printStars(n):
+3. Fungsi printStars(n):
+   - Kondisi Dasar: Jika n adalah 0, fungsi akan mengembalikan kontrol ke pemanggil tanpa mencetak apa pun.
+   - Mencetak Bintang: Dalam setiap panggilan fungsi, program mencetak n bintang pada baris saat ini.
+   - Panggilan Rekursif:Fungsi memanggil dirinya sendiri dengan parameter n - 1 untuk mencetak baris berikutnya dengan jumlah bintang yang lebih sedikit.
 
-Kondisi Dasar: Jika n adalah 0, fungsi akan mengembalikan kontrol ke pemanggil tanpa mencetak apa pun.
-Mencetak Bintang:
-Dalam setiap panggilan fungsi, program mencetak n bintang pada baris saat ini.
-Panggilan Rekursif:
-Fungsi memanggil dirinya sendiri dengan parameter n - 1 untuk mencetak baris berikutnya dengan jumlah bintang yang lebih sedikit.
-Mengakhiri Program:
-
-Setelah semua panggilan fungsi selesai, program berakhir.
+4. Mengakhiri Program:
+   - Setelah semua panggilan fungsi selesai, program berakhir.
 
 ### Cara Kerja Program :
-Mendefinisikan Fungsi:
+1. Mendefinisikan Fungsi:
+   - Fungsi printStars(n) didefinisikan untuk mencetak pola bintang.
 
-Fungsi printStars(n) didefinisikan untuk mencetak pola bintang.
-Menerima Input dari Pengguna:
+2. Menerima Input dari Pengguna:
+   - Minta pengguna untuk memasukkan nilai n melalui input, yang akan menentukan tinggi segitiga terbalik.
 
-Minta pengguna untuk memasukkan nilai n melalui input, yang akan menentukan tinggi segitiga terbalik.
-Proses dalam Fungsi printStars(n):
+3. Proses dalam Fungsi printStars(n):
+   - Jika n sama dengan 0, fungsi berhenti dan tidak melakukan apa-apa.
+   - Jika n lebih besar dari 0:Fungsi mencetak bintang sebanyak n di baris saat ini.
+   - Setelah itu, fungsi memanggil dirinya sendiri dengan n - 1, sehingga pada panggilan berikutnya, akan mencetak satu baris bintang lebih sedikit.
 
-Jika n sama dengan 0, fungsi berhenti dan tidak melakukan apa-apa.
-Jika n lebih besar dari 0:
-Fungsi mencetak bintang sebanyak n di baris saat ini.
-Setelah itu, fungsi memanggil dirinya sendiri dengan n - 1, sehingga pada panggilan berikutnya, akan mencetak satu baris bintang lebih sedikit.
-Mencetak Hasil Akhir:
+4. Mencetak Hasil Akhir:
+   - Proses ini berlanjut hingga semua baris dari segitiga terbalik dicetak, dimulai dari n bintang hingga 1 bintang.
 
-Proses ini berlanjut hingga semua baris dari segitiga terbalik dicetak, dimulai dari n bintang hingga 1 bintang.
-Mengakhiri Program:
-
-Setelah seluruh pola tercetak, program selesai dan berhenti.
+5. Mengakhiri Program:
+   - Setelah seluruh pola tercetak, program selesai dan berhenti.
 
 
 ### 3. Buatlah program yang mengimplementasikan rekursif untuk menampilkan faktor bilangan dari suatu N, atau bilangan yang apa saja yang habis membagi N.
@@ -656,50 +648,49 @@ func faktor(n, i int) []int {
 Program ini adalah program yang mencari semua faktor dari sebuah bilangan bulat positif yang diinput oleh pengguna. Program ini bekerja dengan menggunakan fungsi rekursif yang memeriksa setiap angka dari 1 hingga n (bilangan yang dimasukkan) untuk menentukan apakah angka tersebut adalah faktor dari n. Jika sebuah angka adalah faktor dari n, angka tersebut akan dimasukkan ke dalam daftar hasil dan ditampilkan.
 
 ### Algoritma Program :
-Memulai Program:
+1. Memulai Program:
+   - Deklarasikan variabel n untuk menyimpan input dari pengguna.
 
-Deklarasikan variabel n untuk menyimpan input dari pengguna.
-Menerima Input dari Pengguna:
+2. Menerima Input dari Pengguna:
+   - Tampilkan pesan untuk meminta pengguna memasukkan bilangan bulat positif.
+   - Baca input dari pengguna dan simpan dalam variabel n.
 
-Tampilkan pesan untuk meminta pengguna memasukkan bilangan bulat positif.
-Baca input dari pengguna dan simpan dalam variabel n.
-Memanggil Fungsi faktor:
+3. Memanggil Fungsi faktor:
+   - Panggil fungsi faktor(n, 1) untuk mencari faktor-faktor dari n, dimulai dari 1.
 
-Panggil fungsi faktor(n, 1) untuk mencari faktor-faktor dari n, dimulai dari 1.
-Fungsi Rekursif faktor(n, i):
+4. Fungsi Rekursif faktor(n, i):
+   - Kondisi Basis Rekursi: Jika i lebih besar dari n, kembalikan nil untuk menandakan bahwa pencarian faktor telah selesai.
 
-Kondisi Basis Rekursi: Jika i lebih besar dari n, kembalikan nil untuk menandakan bahwa pencarian faktor telah selesai.
-Pemeriksaan Faktor:
-Jika n % i == 0, berarti i adalah faktor dari n. Tambahkan i ke dalam slice hasil dan lanjutkan pencarian dengan i + 1.
-Jika n % i != 0, lanjutkan dengan memanggil fungsi faktor dengan parameter i + 1.
-Mencetak Hasil:
+5. Pemeriksaan Faktor:
+   - Jika n % i == 0, berarti i adalah faktor dari n. Tambahkan i ke dalam slice hasil dan lanjutkan pencarian dengan i + 1.
+   - Jika n % i != 0, lanjutkan dengan memanggil fungsi faktor dengan parameter i + 1.
 
-Setelah mendapatkan semua faktor dari fungsi faktor, cetak hasilnya.
-Mengakhiri Program:
+6. Mencetak Hasil:
+   - Setelah mendapatkan semua faktor dari fungsi faktor, cetak hasilnya.
 
-Program berakhir setelah hasil faktor dicetak.
+7. Mengakhiri Program:
+   - Program berakhir setelah hasil faktor dicetak.
 
 ### Cara Kerja Program :
-Menampilkan Permintaan Input:
+1. Menampilkan Permintaan Input:
+   - Program meminta pengguna untuk memasukkan bilangan bulat positif melalui input.
 
-Program meminta pengguna untuk memasukkan bilangan bulat positif melalui input.
-Memanggil Fungsi faktor:
+2. Memanggil Fungsi faktor:
+   - Setelah mendapatkan input, fungsi faktor dipanggil dengan parameter n (bilangan yang dimasukkan) dan 1 (awal pencarian faktor).
 
-Setelah mendapatkan input, fungsi faktor dipanggil dengan parameter n (bilangan yang dimasukkan) dan 1 (awal pencarian faktor).
-Proses dalam Fungsi faktor(n, i):
+3. Proses dalam Fungsi faktor(n, i):
+   - Fungsi memeriksa kondisi basis; jika i lebih besar dari n, pencarian berakhir.
+   - Jika i adalah faktor dari n, i ditambahkan ke dalam slice hasil menggunakan append, dan fungsi dipanggil kembali dengan i + 1.
+   - Jika i bukan faktor, fungsi hanya melanjutkan dengan i + 1.
 
-Fungsi memeriksa kondisi basis; jika i lebih besar dari n, pencarian berakhir.
-Jika i adalah faktor dari n, i ditambahkan ke dalam slice hasil menggunakan append, dan fungsi dipanggil kembali dengan i + 1.
-Jika i bukan faktor, fungsi hanya melanjutkan dengan i + 1.
-Mengumpulkan Hasil:
+4. Mengumpulkan Hasil:
+   - Seluruh faktor yang ditemukan akan dikumpulkan dalam bentuk slice dan dikembalikan ke fungsi main.
 
-Seluruh faktor yang ditemukan akan dikumpulkan dalam bentuk slice dan dikembalikan ke fungsi main.
-Mencetak Hasil Akhir:
+5. Mencetak Hasil Akhir:
+   - Hasil yang dikembalikan dari fungsi faktor dicetak dengan format yang sesuai, menampilkan semua faktor dari n.
 
-Hasil yang dikembalikan dari fungsi faktor dicetak dengan format yang sesuai, menampilkan semua faktor dari n.
-Mengakhiri Program:
-
-Setelah semua faktor dicetak, program selesai dan berhenti.
+6. Mengakhiri Program:
+   - Setelah semua faktor dicetak, program selesai dan berhenti.
 
 
 
@@ -760,46 +751,46 @@ Program ini adalah program yang meminta input berupa bilangan bulat positif n da
 Program ini menampilkan pola simetris yang dimulai dari n ke 1 dan kembali ke n.
 
 ### Algoritma Program :
-Memulai Program:
+1. Memulai Program:
+   - Deklarasikan variabel n untuk menyimpan input dari pengguna.
 
-Deklarasikan variabel n untuk menyimpan input dari pengguna.
-Menerima Input dari Pengguna:
+2. Menerima Input dari Pengguna:
+   - Tampilkan pesan untuk meminta pengguna memasukkan bilangan bulat positif N.
+   - Baca input dari pengguna dan simpan dalam variabel n.
 
-Tampilkan pesan untuk meminta pengguna memasukkan bilangan bulat positif N.
-Baca input dari pengguna dan simpan dalam variabel n.
-Memanggil Fungsi Rekursif printRecursive:
+3. Memanggil Fungsi Rekursif printRecursive:
+   - Panggil fungsi printRecursive(n) untuk mulai mencetak pola angka.
 
-Panggil fungsi printRecursive(n) untuk mulai mencetak pola angka.
-Fungsi Rekursif printRecursive(n):
+4. Fungsi Rekursif printRecursive(n):
+   - Kondisi Basis Rekursi: Jika n mencapai 1, cetak angka 1 dan hentikan rekursi dengan return.
 
-Kondisi Basis Rekursi: Jika n mencapai 1, cetak angka 1 dan hentikan rekursi dengan return.
-Mencetak Angka Menurun:
-Cetak angka n diikuti dengan spasi.
-Panggil fungsi printRecursive(n - 1) untuk melanjutkan proses pencetakan dengan nilai yang lebih kecil.
-Mencetak Angka Menaik:
-Setelah kembali dari panggilan rekursif, cetak angka n lagi, menciptakan efek pantulan.
-Mengakhiri Program:
+5. Mencetak Angka Menurun:
+   - Cetak angka n diikuti dengan spasi.
+   - Panggil fungsi printRecursive(n - 1) untuk melanjutkan proses pencetakan dengan nilai yang lebih kecil.
 
-Program berakhir setelah semua angka tercetak dalam urutan yang diinginkan.
+6. Mencetak Angka Menaik:
+   - Setelah kembali dari panggilan rekursif, cetak angka n lagi, menciptakan efek pantulan.
+
+7. Mengakhiri Program:
+   - Program berakhir setelah semua angka tercetak dalam urutan yang diinginkan.
 
 ### Cara Kerja Program :
-Menampilkan Permintaan Input:
+1. Menampilkan Permintaan Input:
+   - Program meminta pengguna untuk memasukkan bilangan bulat positif.
 
-Program meminta pengguna untuk memasukkan bilangan bulat positif.
-Memanggil Fungsi printRecursive:
+2. Memanggil Fungsi printRecursive:
+   - Setelah mendapatkan input, fungsi printRecursive dipanggil dengan parameter n untuk mulai mencetak pola angka.
 
-Setelah mendapatkan input, fungsi printRecursive dipanggil dengan parameter n untuk mulai mencetak pola angka.
-Proses dalam Fungsi printRecursive(n):
+3. Proses dalam Fungsi printRecursive(n):
+   - Fungsi pertama-tama memeriksa apakah n sama dengan 1. Jika ya, angka 1 dicetak, dan fungsi mengembalikan kontrol ke pemanggil.
+   - Jika n lebih besar dari 1, fungsi mencetak n dan kemudian memanggil dirinya sendiri dengan n - 1.
+   - Setelah panggilan rekursif kembali, angka n dicetak lagi, menghasilkan pola yang diinginkan.
 
-Fungsi pertama-tama memeriksa apakah n sama dengan 1. Jika ya, angka 1 dicetak, dan fungsi mengembalikan kontrol ke pemanggil.
-Jika n lebih besar dari 1, fungsi mencetak n dan kemudian memanggil dirinya sendiri dengan n - 1.
-Setelah panggilan rekursif kembali, angka n dicetak lagi, menghasilkan pola yang diinginkan.
-Mencetak Hasil Akhir:
+4. Mencetak Hasil Akhir:
+   - Proses ini berlanjut hingga semua angka dari n hingga 1 dan kembali ke n dicetak dengan urutan yang benar.
 
-Proses ini berlanjut hingga semua angka dari n hingga 1 dan kembali ke n dicetak dengan urutan yang benar.
-Mengakhiri Program:
-
-Setelah seluruh pola dicetak, program selesai dan berhenti.
+5. Mengakhiri Program:
+   - Setelah seluruh pola dicetak, program selesai dan berhenti.
 
 ### 5. Buatlah program yang mengimplementasikan rekursif untuk menampilkan barisan bilangan ganjil.
 
