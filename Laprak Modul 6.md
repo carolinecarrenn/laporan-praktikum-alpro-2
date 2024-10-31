@@ -859,57 +859,55 @@ Program ini adalah program yang mencetak bilangan ganjil dari 1 hingga n dalam f
 Dengan menggunakan `fungsi printOddNumbers`, program memastikan bahwa tabel rapi, dan baris yang tidak penuh akan diberi kolom kosong di akhir.
 
 ### Algoritma Program :
-Memulai Program:
+1. Memulai Program:
+   - Tampilkan judul program dengan dekorasi ASCII.
 
-Tampilkan judul program dengan dekorasi ASCII.
-Menerima Input dari Pengguna:
+2. Menerima Input dari Pengguna:
+   - Deklarasikan variabel n untuk menyimpan input dari pengguna.
+   - Tampilkan pesan untuk meminta pengguna memasukkan bilangan bulat positif N.
+   - Baca input dari pengguna dan simpan dalam variabel n.
 
-Deklarasikan variabel n untuk menyimpan input dari pengguna.
-Tampilkan pesan untuk meminta pengguna memasukkan bilangan bulat positif N.
-Baca input dari pengguna dan simpan dalam variabel n.
-Menampilkan Header Tabel:
+3. Menampilkan Header Tabel:
+   - Cetak header tabel yang menjelaskan isi tabel (bilangan ganjil dari 1 hingga N).
 
-Cetak header tabel yang menjelaskan isi tabel (bilangan ganjil dari 1 hingga N).
-Memanggil Fungsi printOddNumbers:
+4. Memanggil Fungsi printOddNumbers:
+   - Panggil fungsi printOddNumbers(1, n, 5) untuk mencetak bilangan ganjil dari 1 hingga n, dengan 5 kolom per baris.
 
-Panggil fungsi printOddNumbers(1, n, 5) untuk mencetak bilangan ganjil dari 1 hingga n, dengan 5 kolom per baris.
-Fungsi printOddNumbers(i, n, columns):
+5. Fungsi printOddNumbers(i, n, columns):
+   - Inisialisasi:
+     - Variabel count digunakan untuk menghitung jumlah bilangan ganjil yang telah dicetak pada baris saat ini.
+   - Pencetakan Bilangan Ganjil:
+     - Dalam loop, mulai dari i dan tambahkan 2 setiap iterasi untuk mendapatkan bilangan ganjil.
+     - Cetak setiap bilangan ganjil dengan lebar 6 karakter.
+     - Setelah mencetak bilangan, tingkatkan count.
+   - Pengaturan Kolom:
+     - Jika count mencapai jumlah kolom yang ditentukan (columns), tutup baris dan mulai baris baru.
+   - Menutup Baris Terakhir:
+     - Jika loop berakhir tetapi kolom belum penuh, tambahkan ruang kosong untuk kolom yang tersisa dan tutup baris terakhir.
 
-Inisialisasi:
-Variabel count digunakan untuk menghitung jumlah bilangan ganjil yang telah dicetak pada baris saat ini.
-Pencetakan Bilangan Ganjil:
-Dalam loop, mulai dari i dan tambahkan 2 setiap iterasi untuk mendapatkan bilangan ganjil.
-Cetak setiap bilangan ganjil dengan lebar 6 karakter.
-Setelah mencetak bilangan, tingkatkan count.
-Pengaturan Kolom:
-Jika count mencapai jumlah kolom yang ditentukan (columns), tutup baris dan mulai baris baru.
-Menutup Baris Terakhir:
-Jika loop berakhir tetapi kolom belum penuh, tambahkan ruang kosong untuk kolom yang tersisa dan tutup baris terakhir.
-Mengakhiri Program:
-
-Program berakhir setelah semua bilangan ganjil dicetak dalam format tabel.
+6. Mengakhiri Program:
+   - Program berakhir setelah semua bilangan ganjil dicetak dalam format tabel.
 
 ### Cara Kerja Program :
-Menampilkan Judul Program:
+1. Menampilkan Judul Program:
+   - Program dimulai dengan menampilkan judul "Bilangan Ganjil" dalam format tabel.
 
-Program dimulai dengan menampilkan judul "Bilangan Ganjil" dalam format tabel.
-Input dari Pengguna:
+2. Input dari Pengguna:
+   - Program meminta pengguna untuk memasukkan bilangan bulat positif N, yang akan digunakan sebagai batas atas dalam pencetakan bilangan ganjil.
 
-Program meminta pengguna untuk memasukkan bilangan bulat positif N, yang akan digunakan sebagai batas atas dalam pencetakan bilangan ganjil.
-Menampilkan Tabel Bilangan Ganjil:
+3. Menampilkan Tabel Bilangan Ganjil:
+   - Setelah menerima input, program mencetak header tabel yang menunjukkan rentang bilangan ganjil yang akan ditampilkan.
 
-Setelah menerima input, program mencetak header tabel yang menunjukkan rentang bilangan ganjil yang akan ditampilkan.
-Proses dalam Fungsi printOddNumbers:
+4. Proses dalam Fungsi printOddNumbers:
+   - Fungsi memulai dari 1 dan mencetak setiap bilangan ganjil hingga mencapai n.
+   - Setiap bilangan dicetak dalam format yang telah ditentukan, dan program memeriksa jumlah kolom untuk memastikan tampilan tabel tetap rapi.
+   - Fungsi juga menangani situasi di mana tidak semua kolom terisi pada baris terakhir dengan menambahkan ruang kosong yang diperlukan.
 
-Fungsi memulai dari 1 dan mencetak setiap bilangan ganjil hingga mencapai n.
-Setiap bilangan dicetak dalam format yang telah ditentukan, dan program memeriksa jumlah kolom untuk memastikan tampilan tabel tetap rapi.
-Fungsi juga menangani situasi di mana tidak semua kolom terisi pada baris terakhir dengan menambahkan ruang kosong yang diperlukan.
-Mencetak Hasil Akhir:
+5. Mencetak Hasil Akhir:
+   - Setelah semua bilangan ganjil dicetak, program menutup tabel dan selesai.
 
-Setelah semua bilangan ganjil dicetak, program menutup tabel dan selesai.
-Mengakhiri Program:
-
-Program berakhir dengan menampilkan hasil pencetakan dalam format tabel.
+6. Mengakhiri Program:
+   - Program berakhir dengan menampilkan hasil pencetakan dalam format tabel.
 
 ### 6. Buatlah program yang mengimplementasikan rekursif untuk mencari hasil pangkat dari dua buah bilangan.
 
@@ -977,45 +975,43 @@ Hasil akhir perhitungan ditampilkan dalam format yang rapi di layar.
 Program ini menekankan penggunaan rekursi untuk menghitung eksponen.
 
 ### Algoritma Program :
-Memulai Program:
+1. Memulai Program:
+   - Tampilkan header program yang menjelaskan fungsinya sebagai kalkulator pangkat.
 
-Tampilkan header program yang menjelaskan fungsinya sebagai kalkulator pangkat.
-Menerima Input dari Pengguna:
+2. Menerima Input dari Pengguna:
+   - Deklarasikan variabel x dan y untuk menyimpan input dari pengguna.
+   - Tampilkan pesan untuk meminta pengguna memasukkan bilangan bulat x.
+   - Baca input dari pengguna dan simpan dalam variabel x.
+   - Tampilkan pesan untuk meminta pengguna memasukkan pangkat y.
+   - Baca input dari pengguna dan simpan dalam variabel y.
 
-Deklarasikan variabel x dan y untuk menyimpan input dari pengguna.
-Tampilkan pesan untuk meminta pengguna memasukkan bilangan bulat x.
-Baca input dari pengguna dan simpan dalam variabel x.
-Tampilkan pesan untuk meminta pengguna memasukkan pangkat y.
-Baca input dari pengguna dan simpan dalam variabel y.
-Menghitung Hasil Pangkat:
+3. Menghitung Hasil Pangkat:
+   - Panggil fungsi power(x, y) untuk menghitung hasil dari 𝑥^𝑦.
 
-Panggil fungsi power(x, y) untuk menghitung hasil dari 𝑥^𝑦.
-Menampilkan Hasil:
+4. Menampilkan Hasil:
+   - Tampilkan hasil perhitungan dalam format yang jelas dan mudah dibaca.
 
-Tampilkan hasil perhitungan dalam format yang jelas dan mudah dibaca.
-Mengakhiri Program:
-
-Program berakhir setelah menampilkan hasil perhitungan.
+5. Mengakhiri Program:
+   - Program berakhir setelah menampilkan hasil perhitungan.
 
 ### Cara Kerja Program :
-Menampilkan Header Program:
+1. Menampilkan Header Program:
+   - Program dimulai dengan menampilkan judul "PROGRAM KALKULATOR PANGKAT" yang memberikan informasi tentang fungsi program.
 
-Program dimulai dengan menampilkan judul "PROGRAM KALKULATOR PANGKAT" yang memberikan informasi tentang fungsi program.
-Input dari Pengguna:
+2. Input dari Pengguna:
+   - Pengguna diminta untuk memasukkan bilangan bulat x yang merupakan basis dari pangkat.
+   - Selanjutnya, pengguna diminta untuk memasukkan pangkat y yang akan diterapkan pada x.
 
-Pengguna diminta untuk memasukkan bilangan bulat x yang merupakan basis dari pangkat.
-Selanjutnya, pengguna diminta untuk memasukkan pangkat y yang akan diterapkan pada x.
-Menghitung Hasil Pangkat:
+3. Menghitung Hasil Pangkat:
+   - Program menggunakan fungsi rekursif power untuk menghitung hasil pangkat:
+   - Basis Rekursi: Jika y sama dengan 0, fungsi mengembalikan 1 (karena 𝑥^0 = 1).
+   - Jika y lebih besar dari 0, fungsi akan mengalikan x dengan hasil dari power(x, y-1), yang berarti menghitung 𝑥^𝑦− 1.
 
-Program menggunakan fungsi rekursif power untuk menghitung hasil pangkat:
-Basis Rekursi: Jika y sama dengan 0, fungsi mengembalikan 1 (karena 𝑥^0 = 1).
-Jika y lebih besar dari 0, fungsi akan mengalikan x dengan hasil dari power(x, y-1), yang berarti menghitung 𝑥^𝑦− 1.
-Menampilkan Hasil Akhir:
+4. Menampilkan Hasil Akhir:
+   - Setelah menghitung hasil, program mencetak hasil dari perhitungan dalam format yang jelas, menunjukkan nilai x, y, dan hasilnya.
 
-Setelah menghitung hasil, program mencetak hasil dari perhitungan dalam format yang jelas, menunjukkan nilai x, y, dan hasilnya.
-Mengakhiri Program:
-
-Program berakhir setelah menampilkan hasil, memberikan pengalaman interaktif kepada pengguna.
+5. Mengakhiri Program:
+   - Program berakhir setelah menampilkan hasil, memberikan pengalaman interaktif kepada pengguna.
 
 
 ## Kesimpulan 
