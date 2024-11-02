@@ -529,69 +529,71 @@ package main
 
 import "fmt"
 
-// Fungsi untuk mencetak pola bintang dalam bentuk segitiga terbalik
-func printStars(n int) {
-	if n == 0 {
-		return
-	}
-
-	// Cetak bintang sebanyak nilai n pada baris ini
-	for i := 0; i < n; i++ {
-		fmt.Print("*")
-	}
-	fmt.Println()
-
-	// Panggil fungsi printStars dengan nilai n - 1
-	printStars(n - 1)
+// Fungsi utama
+func main() {
+    var n int
+    fmt.Print("Masukkan nilai N: ")
+    fmt.Scanln(&n)
+    printStar(n) // Memanggil fungsi printStar untuk mencetak pola bintang
 }
 
-func main() {
-	var n int
-	fmt.Print("Masukkan nilai N: ")
-	fmt.Scanln(&n)
-	printStars(n)
+// Fungsi rekursif untuk mencetak pola bintang
+func printStar(n int) {
+    // Basis rekursi: jika n == 0, hentikan rekursi
+    if n == 0 {
+        return
+    }
+
+    // Memanggil printStar dengan nilai n-1 (rekursi menurun)
+    printStar(n - 1)
+
+    // Setelah kembali dari rekursi, cetak bintang sebanyak nilai n
+    for i := 0; i < n; i++ {
+        fmt.Print("*")
+    }
+    fmt.Println() // Pindah ke baris baru setelah mencetak bintang
 }
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/70e4d930-9b15-4418-ab06-0d6c00ba4279)
+![image](https://github.com/user-attachments/assets/87e0392e-e279-4a3f-a141-890215ac5a00)
 
 ### Full code Screenshot :
-![carbon (9)](https://github.com/user-attachments/assets/c01c963a-3255-480a-96d6-e2466d2ce6d3)
+![carbon (18)](https://github.com/user-attachments/assets/133899db-783d-44f2-b0cd-788cd50e9eca)
 
 ### Deskripsi Program : 
-Program ini adalah program yang mencetak pola bintang berbentuk segitiga terbalik berdasarkan input pengguna. Program menggunakan fungsi rekursif untuk mencetak pola ini, di mana setiap baris memiliki jumlah bintang yang berkurang satu dibandingkan baris sebelumnya.
+Program ini adalah program yang meminta input bilangan N dari pengguna dan menggunakan fungsi rekursif printStar untuk mencetak pola bintang bertingkat, di mana setiap baris berikutnya memiliki satu bintang lebih banyak dari baris sebelumnya hingga mencapai jumlah N.
 
 ### Algoritma Program :
-1. Memulai Program:
-   - Program dimulai dengan mendefinisikan fungsi printStars yang akan digunakan untuk mencetak pola bintang.
+1. Menerima Input dari Pengguna:
+   - Program meminta pengguna untuk memasukkan nilai N.
 
-2. Menerima Input dari Pengguna:
-   - Minta pengguna untuk memasukkan nilai n, yang akan digunakan sebagai tinggi segitiga terbalik.
+2. Deklarasi Fungsi printStar:
+   - Fungsi printStar menerima parameter n bertipe integer.
+   - Jika n bernilai 0, fungsi berhenti (kondisi dasar rekursi).
+   - Jika n > 0, fungsi akan memanggil printStar(n - 1), menurunkan nilai n pada setiap pemanggilan rekursif.
+   - Setelah kembali dari rekursi, program mencetak bintang sebanyak nilai n.
 
-3. Fungsi printStars(n):
-   - Kondisi Dasar: Jika n adalah 0, fungsi akan mengembalikan kontrol ke pemanggil tanpa mencetak apa pun.
-   - Mencetak Bintang: Dalam setiap panggilan fungsi, program mencetak n bintang pada baris saat ini.
-   - Panggilan Rekursif:Fungsi memanggil dirinya sendiri dengan parameter n - 1 untuk mencetak baris berikutnya dengan jumlah bintang yang lebih sedikit.
+3. Mencetak Pola Bintang:
+   - Pola bintang dicetak secara berurutan, dari baris pertama dengan satu bintang hingga baris terakhir dengan N bintang.
 
 4. Mengakhiri Program:
-   - Setelah semua panggilan fungsi selesai, program berakhir.
+   - Setelah seluruh pola tercetak, program selesai dan berhenti.
 
 ### Cara Kerja Program :
-1. Mendefinisikan Fungsi:
-   - Fungsi printStars(n) didefinisikan untuk mencetak pola bintang.
+1. Eksekusi Dimulai dari Fungsi main:
+   - Program meminta input dari pengguna dan menyimpannya ke variabel n.
+   - Fungsi printStar dipanggil dengan n sebagai argumen.
 
-2. Menerima Input dari Pengguna:
-   - Minta pengguna untuk memasukkan nilai n melalui input, yang akan menentukan tinggi segitiga terbalik.
+2. Proses Rekursi di Fungsi printStar:
+   - Ketika printStar dipanggil, nilai n dicek:
+   - Jika n == 0, fungsi berhenti (basis rekursi).
+   - Jika n > 0, fungsi memanggil dirinya sendiri dengan nilai n - 1.
+   - Setelah kembali dari pemanggilan rekursif, program mencetak n bintang pada baris tersebut.
 
-3. Proses dalam Fungsi printStars(n):
-   - Jika n sama dengan 0, fungsi berhenti dan tidak melakukan apa-apa.
-   - Jika n lebih besar dari 0:Fungsi mencetak bintang sebanyak n di baris saat ini.
-   - Setelah itu, fungsi memanggil dirinya sendiri dengan n - 1, sehingga pada panggilan berikutnya, akan mencetak satu baris bintang lebih sedikit.
+3. Output Pola Bintang:
+   - Karena rekursi dilakukan secara menurun (dari N hingga 1), pola bintang dicetak dalam urutan menaik dari 1 bintang hingga N bintang.
 
-4. Mencetak Hasil Akhir:
-   - Proses ini berlanjut hingga semua baris dari segitiga terbalik dicetak, dimulai dari n bintang hingga 1 bintang.
-
-5. Mengakhiri Program:
+4. Mengakhiri Program:
    - Setelah seluruh pola tercetak, program selesai dan berhenti.
 
 
