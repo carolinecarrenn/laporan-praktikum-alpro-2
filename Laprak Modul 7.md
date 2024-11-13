@@ -279,10 +279,58 @@ func main() {
 ```
 
 ### Output:
+![image](https://github.com/user-attachments/assets/488b36fe-9a35-40a0-ad94-46229e2d7e25)
+
 ### Full code Screenshot :
+![carbon (19)](https://github.com/user-attachments/assets/17d61246-2ddc-4945-9edd-bc5c41e3b2d5)
+
 ### Deskripsi Program : 
+Program ini menghitung durasi waktu parkir berdasarkan input waktu masuk dan keluar dalam format jam, menit, dan detik. Pengguna diminta memasukkan waktu parkir dan waktu pulang, yang akan dikonversi ke dalam satuan detik untuk memudahkan perhitungan. Selanjutnya, program menghitung lama parkir dengan mengurangi waktu pulang dengan waktu parkir, menghasilkan durasi dalam bentuk detik. Durasi tersebut kemudian dikonversi kembali ke format jam, menit, dan detik untuk ditampilkan ke pengguna. Output program menampilkan total lama parkir dalam format "jam menit detik".
+
 ### Algoritma Program :
+1. Input Data:
+   - Program meminta pengguna untuk memasukkan waktu parkir (wParkir) dalam bentuk jam, menit, dan detik.
+   - Program meminta pengguna untuk memasukkan waktu pulang (wPulang) dalam bentuk jam, menit, dan detik.
+
+2. Konversi Waktu ke Detik:
+   - Program mengonversi waktu parkir (wParkir) ke detik dengan rumus:
+     
+     *dParkir=wParkir.detik+(wParkir.menit×60)+(wParkir.jam×3600).*
+     
+   - Program mengonversi waktu pulang (wPulang) ke detik dengan rumus serupa, menyimpan hasilnya dalam dPulang.
+
+3. Penghitungan Lama Parkir:
+   - Program menghitung lama parkir dalam detik dengan rumus:
+
+     *lParkir=dPulang−dParkir.*
+
+4. Konversi Lama Parkir ke Jam, Menit, dan Detik:
+   - Durasi parkir dikonversi dari detik ke format jam, menit, dan detik:
+     
+     *durasi.jam diperoleh dari hasil bagi lParkir / 3600.*
+
+     *durasi.menit diperoleh dari sisa bagi lParkir % 3600 / 60.*
+
+     *durasi.detik diperoleh dari sisa lParkir % 3600 % 60.*
+
+5. Output:
+   - Program menampilkan durasi parkir dalam format "X jam Y menit Z detik".
+     
 ### Cara Kerja Program :
+1. Memulai Program:
+   - Program dijalankan dan meminta pengguna untuk memasukkan waktu parkir (wParkir) dan waktu pulang (wPulang) dalam bentuk jam, menit, dan detik.
+
+2. Konversi ke Detik:
+   - Program mengonversi waktu parkir dan waktu pulang dari format jam-menit-detik menjadi total detik untuk kemudahan perhitungan.
+
+3. Menghitung Lama Parkir:
+   - Program menghitung lama parkir dalam detik dengan mengurangi dPulang dengan dParkir.
+
+4. Mengonversi Lama Parkir ke Jam, Menit, dan Detik:
+   - Lama parkir yang telah dihitung dalam detik kemudian dikonversi kembali ke jam, menit, dan detik menggunakan operasi aritmatika.
+
+5. Menampilkan Hasil:
+   - Program menampilkan durasi parkir dalam format yang mudah dibaca, yaitu "X jam Y menit Z detik", untuk menunjukkan lama parkir yang tepat.
 
 ### 2. Program sederhana untuk validasi duplikasi nama pada daftar teman.
 
@@ -335,11 +383,50 @@ func main() {
 	fmt.Println("Daftar Teman:", daftarTeman)
 }
 ```
+
 ### Output:
+![image](https://github.com/user-attachments/assets/d8061cd3-03c0-46f2-9eef-81f86ce6ac38)
+
 ### Full code Screenshot :
+![carbon (20)](https://github.com/user-attachments/assets/e57b75d8-58e4-4322-a6eb-e8bee9ba31db)
+
 ### Deskripsi Program : 
+Program ini berfungsi untuk menambah nama-nama baru ke dalam daftar teman dengan syarat nama tersebut belum ada dalam daftar. Pertama, program mengecek setiap nama dalam daftar teman untuk melihat apakah nama yang ingin ditambahkan sudah ada. Jika nama yang akan ditambahkan belum ada, maka nama tersebut akan dimasukkan ke dalam daftar teman. Jika nama sudah ada, program akan memberikan pesan kepada pengguna bahwa nama tersebut sudah ada dalam daftar. Di akhir, program menampilkan daftar teman yang diperbarui.
+
 ### Algoritma Program :
+1. Input Data:
+   - Definisikan slice daftarTeman yang berisi beberapa nama awal.
+   - Definisikan slice namaBaru yang berisi nama-nama baru yang ingin ditambahkan ke dalam daftarTeman.
+
+2. Pengecekan Nama dalam Daftar:
+   - Buat fungsi sudahAda untuk memeriksa apakah sebuah nama sudah ada di dalam slice daftarTeman:
+     - Loop melalui daftarTeman dan periksa setiap nama.
+     - Jika nama ditemukan, return true; jika tidak, return false.
+
+3. Penambahan Nama ke Daftar Teman:
+   - Loop melalui namaBaru:
+   - Untuk setiap nama, panggil fungsi sudahAda untuk memeriksa apakah nama tersebut sudah ada dalam daftarTeman.
+   - Jika sudahAda return false, tambahkan nama tersebut ke daftarTeman.
+   - Jika sudahAda return true, tampilkan pesan bahwa nama sudah ada dalam daftar.
+
+4. Output:
+- Tampilkan daftar teman yang telah diperbarui.
+
 ### Cara Kerja Program :
+1. Memulai Program:
+   - Program dimulai dengan mendefinisikan slice daftarTeman yang berisi beberapa nama awal, serta slice namaBaru yang berisi nama-nama yang ingin ditambahkan.
+
+2. Pengecekan Nama:
+   - Program menggunakan fungsi sudahAda untuk memeriksa apakah nama dari namaBaru sudah ada dalam daftarTeman.
+
+3. Menambah Nama Jika Belum Ada:
+   - Untuk setiap nama di namaBaru, program memeriksa apakah nama tersebut sudah ada di daftarTeman. Jika belum ada, nama tersebut ditambahkan ke daftarTeman. Jika sudah ada, program menampilkan pesan bahwa nama tersebut sudah ada.
+
+4. Menampilkan Daftar Teman yang Diperbarui:
+   - Setelah semua nama diproses, program menampilkan daftarTeman yang telah diperbarui.
+
+5. Akhir Program:
+   - Program selesai setelah menampilkan daftar teman yang telah diperbarui.
 
 ### 3. Program sederhana untuk menampilkan daftar harga buah menggunakan map.
 
@@ -376,10 +463,48 @@ func main() {
 ```
 
 ### Output:
+![image](https://github.com/user-attachments/assets/2c6dd1a5-8d5a-4fb6-955a-eac544493a81)
+
 ### Full code Screenshot :
+![carbon (21)](https://github.com/user-attachments/assets/24ccdbf1-54e2-4227-9961-c0817d89b615)
+
 ### Deskripsi Program : 
+Program ini bertujuan untuk menyimpan dan menampilkan daftar harga buah menggunakan struktur data map di Go. Dalam map ini, nama buah digunakan sebagai kunci dan harga sebagai nilai. Program terlebih dahulu mendefinisikan map dengan beberapa buah dan harga yang sudah diisi, yaitu "Apel", "Pisang", dan "Mangga". Selanjutnya, program menampilkan daftar harga setiap buah dengan melakukan iterasi pada map. Terakhir, program menampilkan harga "Mangga" secara langsung menggunakan kunci "Mangga".
+
 ### Algoritma Program :
+1. Inisialisasi Data:
+   - Buat sebuah map bernama hargaBuah dengan tipe string sebagai kunci dan int sebagai nilai.
+
+2. Isi map hargaBuah dengan beberapa pasangan kunci-nilai:
+   - "Apel" -> 5000
+   - "Pisang" -> 3000
+   - "Mangga" -> 7000
+
+3. Menampilkan Daftar Harga Buah:
+   - Cetak teks "Harga Buah:" sebagai judul daftar.
+
+4. Iterasi melalui map hargaBuah menggunakan loop for:
+   - Untuk setiap pasangan buah dan harga, tampilkan nama buah (buah) dan harganya (harga) dalam format "Nama: Harga".
+
+5. Menampilkan Harga Buah Tertentu:
+   - Cetak harga buah "Mangga" secara langsung dengan mengakses nilai hargaBuah["Mangga"].
+
 ### Cara Kerja Program :
+1. Memulai Program:
+   - Program dimulai dengan membuat sebuah map bernama hargaBuah yang memiliki nama buah sebagai kunci dan harga sebagai nilai.
+
+2. Mengisi Data Buah dan Harga:
+   - Map diisi dengan beberapa data buah dan harga, seperti "Apel", "Pisang", dan "Mangga".
+
+3. Menampilkan Daftar Harga:
+   - Program menampilkan daftar harga dengan melakukan iterasi pada map hargaBuah. Untuk setiap entri buah dan harga, program menampilkan teks dalam format "<Nama Buah>: Rp<Harga>".
+
+4. Menampilkan Harga Buah Tertentu:
+   - Program kemudian menampilkan harga buah "Mangga" secara spesifik dengan mengaksesnya langsung melalui map hargaBuah menggunakan kunci "Mangga".
+
+5. Akhir Program:
+   - Program selesai setelah menampilkan harga setiap buah dalam map dan harga buah "Mangga" secara terpisah.
+
 
 ## Unguided 
 
@@ -463,12 +588,64 @@ func main() {
 ```
 
 ### Output:
+![image](https://github.com/user-attachments/assets/8a87fc30-f5c5-4709-8970-b63aca70a4b6)
+
 ### Full code Screenshot :
+![carbon (22)](https://github.com/user-attachments/assets/f80157ef-0e4c-424d-b25d-438744df95aa)
+
 ### Deskripsi Program : 
+Program ini bertujuan untuk menentukan posisi sebuah titik relatif terhadap dua lingkaran. Pengguna diminta untuk memasukkan data koordinat pusat dan radius dari dua lingkaran, serta koordinat dari titik yang akan diperiksa posisinya. Program menggunakan rumus jarak Euclidean untuk menghitung jarak titik dari pusat kedua lingkaran. Berdasarkan jarak tersebut, program menentukan apakah titik tersebut berada di dalam kedua lingkaran, di dalam salah satu lingkaran, atau di luar keduanya.
+
 ### Algoritma Program :
+1. Inisialisasi Data:
+   - Definisikan struct Point dengan atribut X dan Y untuk merepresentasikan koordinat titik.
+   - Definisikan struct Circle dengan atribut Center (tipe Point) dan Radius (tipe int) untuk merepresentasikan lingkaran.
+
+2. Fungsi distance:
+   - Buat fungsi distance untuk menghitung jarak antara dua titik (p1, p2) menggunakan rumus Euclidean:
+   - Jarak dihitung sebagai
+
+     ![image](https://github.com/user-attachments/assets/18476c5b-8feb-4e68-b795-7c05752285c5)
+
+
+3. Fungsi checkPointPosition:
+   - Buat fungsi checkPointPosition untuk menentukan posisi titik point relatif terhadap dua lingkaran (circle1 dan circle2):
+   - Hitung jarak antara titik point dan pusat circle1 (dist1).
+   - Hitung jarak antara titik point dan pusat circle2 (dist2).
+
+4. Tentukan posisi titik:
+   - Jika dist1 ≤ radius circle1 dan dist2 ≤ radius circle2, titik berada di dalam kedua lingkaran.
+   - Jika hanya dist1 ≤ radius circle1, titik berada di dalam lingkaran 1.
+   - Jika hanya dist2 ≤ radius circle2, titik berada di dalam lingkaran 2.
+   - Jika tidak memenuhi semua kondisi di atas, titik berada di luar kedua lingkaran.
+
+5. Input dan Output:
+   - Ambil input dari pengguna untuk koordinat pusat dan radius circle1.
+   - Ambil input dari pengguna untuk koordinat pusat dan radius circle2.
+   - Ambil input dari pengguna untuk koordinat point.
+   - Panggil fungsi checkPointPosition untuk memeriksa posisi point dan tampilkan hasilnya.
+
 ### Cara Kerja Program :
+1. Memulai Program:
+   - Program dimulai dengan mendefinisikan dua lingkaran (circle1 dan circle2) dan satu titik sembarang (point) yang akan digunakan untuk memeriksa posisi titik.
+
+2. Mengambil Input:
+   - Program meminta pengguna untuk memasukkan koordinat pusat dan radius dari circle1 dan circle2, serta koordinat point.
+
+3. Menghitung Jarak Titik:
+   - Program menggunakan fungsi distance untuk menghitung jarak titik point ke pusat circle1 dan circle2.
+
+4. Menentukan Posisi Titik:
+   - Dengan menggunakan fungsi checkPointPosition, program menentukan apakah point berada di dalam atau di luar kedua lingkaran, atau hanya di dalam salah satu lingkaran.
+
+5. Menampilkan Hasil:
+   - Program menampilkan posisi titik relatif terhadap kedua lingkaran sesuai hasil pengecekan.
+
+6. Akhir Program:
+   - Setelah menampilkan hasil, program selesai.
 
 ### 2. Sebuah array digunakan untuk menampung sekumpulan bilangan bulat. Buatlah program yang digunakan untuk mengisi array tersebut sebanyak N elemen nilai. Asumsikan array memiliki kapasitas penyimpanan data sejumlah elemen tertentu. Program dapat menampilkan beberapa informasi berikut:
+
 a.	Menampilkan keseluruhan isi dari array.
 
 b.	Menampilkan elemen-elemen array dengan indeks ganjil saja.
@@ -672,11 +849,98 @@ func tampilkanFrekuensi(array []int, n int) {
 ```
 
 ### Output:
-### Full code Screenshot :
-### Deskripsi Program : 
-### Algoritma Program :
-### Cara Kerja Program :
+**Jika user memilih menu 1:**
+![image](https://github.com/user-attachments/assets/5fca252e-6608-425b-a5eb-bc6ef312d390)
 
+**Jika user memilih menu 2:**
+![image](https://github.com/user-attachments/assets/182f341e-49a6-4ba8-876f-e92b6e3ac965)
+
+**Jika user memilih menu 3:**
+![image](https://github.com/user-attachments/assets/deb80981-3837-4441-9c8a-03d12a5e44c4)
+
+**Jika user memilih menu 4:**
+![image](https://github.com/user-attachments/assets/9405649c-ddc9-4d5f-b452-4c63b55582c8)
+
+**Jika user memilih menu 5:**
+![image](https://github.com/user-attachments/assets/80cd95b7-243f-4b2e-8ae5-e4d6c0066f6b)
+
+**Jika user memilih menu 6:**
+![image](https://github.com/user-attachments/assets/5e588ffd-3ff3-46d1-9338-34bf0d782b41)
+
+**Jika user memilih menu 7:**
+![image](https://github.com/user-attachments/assets/24e4898e-7eb4-41d4-b9ef-6a7bb34e89d8)
+
+**Jika user memilih menu 8:**
+![image](https://github.com/user-attachments/assets/37ca1bc2-31c8-4983-9a7d-382a986d32ef)
+
+**Jika user memilih menu 9:**
+![image](https://github.com/user-attachments/assets/9d61f116-a8e1-45d1-8dfb-dbeba8f8be35)
+
+### Full code Screenshot :
+![carbon (23)](https://github.com/user-attachments/assets/adeda258-9ed6-4a44-b521-3b0b139579cb)
+
+### Deskripsi Program : 
+Program ini adalah aplikasi berbasis konsol yang menggunakan array untuk menyimpan dan memanipulasi sejumlah elemen bilangan bulat. Pengguna dapat memilih dari berbagai menu operasi seperti menampilkan isi array, menampilkan elemen pada indeks ganjil atau genap, menghapus elemen tertentu, menghitung rata-rata, mencari standar deviasi, dan menghitung frekuensi suatu bilangan. Dengan array maksimal 10 elemen, program juga membatasi jumlah elemen yang dimasukkan dan memberikan antarmuka interaktif untuk setiap operasi.
+
+### Algoritma Program :
+1. Inisialisasi Array:
+   - Deklarasikan array dengan kapasitas 10 untuk menampung nilai bilangan bulat.
+
+2. Input Jumlah Elemen:
+   - Minta pengguna memasukkan jumlah elemen yang ingin ditambahkan ke array, dengan batas maksimum 10 elemen.
+
+3. Input Elemen Array:
+   - Minta pengguna memasukkan nilai untuk setiap elemen array.
+
+4. Pilihan Menu:
+   - Tampilkan menu dengan opsi untuk melakukan berbagai operasi pada array:
+     - Menampilkan isi array.
+     - Menampilkan elemen dengan indeks ganjil atau genap.
+     - Menampilkan elemen dengan indeks kelipatan bilangan tertentu.
+     - Menghapus elemen array pada indeks tertentu.
+     - Menghitung rata-rata nilai elemen.
+     - Menghitung standar deviasi nilai elemen.
+     - Menghitung frekuensi kemunculan bilangan tertentu.
+     - Keluar dari program.
+
+5. Eksekusi Pilihan:
+   - Baca pilihan pengguna dan panggil fungsi yang sesuai berdasarkan pilihan:
+     - tampilkanKeseluruhanIsiArray: Menampilkan seluruh elemen di array.
+     - tampilkanElemenIndeksGanjil: Menampilkan elemen pada indeks ganjil.
+     - tampilkanElemenIndeksGenap: Menampilkan elemen pada indeks genap.
+     - tampilkanElemenKelipatan: Menampilkan elemen pada indeks kelipatan tertentu.
+     - hapusElemenArray: Menghapus elemen di indeks tertentu.
+     - tampilkanRataRata: Menghitung dan menampilkan rata-rata elemen.
+     - tampilkanStandarDeviasi: Menghitung dan menampilkan standar deviasi elemen.
+     - tampilkanFrekuensi: Menampilkan frekuensi kemunculan bilangan tertentu.
+
+6. Keluar Program:
+   - Jika pengguna memilih opsi untuk keluar, program menampilkan pesan terima kasih dan mengakhiri eksekusi.
+
+### Cara Kerja Program :
+1. Inisialisasi dan Input Elemen:
+   - Program dimulai dengan meminta pengguna memasukkan jumlah elemen yang ingin dimasukkan ke dalam array, dibatasi maksimal 10 elemen.
+   - Program meminta pengguna untuk mengisi nilai-nilai elemen tersebut satu per satu ke dalam array.
+
+2. Menampilkan Menu Pilihan:
+   - Setelah array diisi, program menampilkan menu pilihan yang memungkinkan pengguna untuk melakukan berbagai operasi pada array, seperti menampilkan elemen, menghitung rata-rata, menghapus elemen, dll.
+   - Memilih dan Menjalankan Operasi:
+     - Pengguna memasukkan nomor pilihan yang diinginkan, dan program menjalankan fungsi sesuai dengan pilihan tersebut:
+       - Pilihan 1: Menampilkan seluruh elemen dalam array.
+       - Pilihan 2: Menampilkan elemen pada indeks ganjil.
+       - Pilihan 3: Menampilkan elemen pada indeks genap.
+       - Pilihan 4: Menampilkan elemen pada indeks kelipatan bilangan yang dimasukkan oleh pengguna.
+       - Pilihan 5: Menghapus elemen pada indeks tertentu dan memperbarui jumlah elemen dalam array.
+       - Pilihan 6: Menghitung dan menampilkan rata-rata elemen dalam array.
+       - Pilihan 7: Menghitung dan menampilkan standar deviasi elemen dalam array.
+       - Pilihan 8: Menghitung dan menampilkan frekuensi kemunculan suatu bilangan dalam array.
+
+3. Mengulangi Proses:
+   - Setelah operasi selesai, program kembali menampilkan menu dan memungkinkan pengguna untuk memilih operasi lain.
+   - Program akan terus mengulangi proses ini sampai pengguna memilih untuk keluar dengan memilih Pilihan 9.
+
+4. Mengakhiri Program:
+   - Jika pengguna memilih Pilihan 9, program menampilkan pesan akhir dan menghentikan eksekusi.
 
 ### 3. Sebuah program digunakan untuk menyimpan dan menampilkan nama-nama klub yang memenangkan pertandingan bola pada suatu grup pertandingan. Buatlah program yang digunakan untuk merekap skor pertandingan bola 2 buah klub bola yang berlaga. Pertama-tama program meminta masukan nama-nama klub yang bertanding, kemudian program meminta masukan skor hasil pertandingan kedua klub tersebut.  Yang disimpan dalam array adalah nama-nama klub yang menang saja. Proses input skor berhenti ketika skor salah satu atau kedua klub tidak valid (negatif). Di akhir program, tampilkan daftar klub yang memenangkan pertandingan. 
 
@@ -684,16 +948,118 @@ func tampilkanFrekuensi(array []int, n int) {
 
 ![image](https://github.com/user-attachments/assets/4146434b-4259-4554-b798-d28652eaf506)
 
-
 ### Source Code :
 ```go
-```
-### Output:
-### Full code Screenshot :
-### Deskripsi Program : 
-### Algoritma Program :
-### Cara Kerja Program :
+// Caroline Carren
+// 2311102174
+// S1 IF 11 5
 
+package main
+
+import "fmt"
+
+func main() {
+	var klubA, klubB string
+	var skorA, skorB int
+	var hasil []string
+
+	// Input nama klub
+	fmt.Print("Masukkan nama klub A: ")
+	fmt.Scanln(&klubA)
+	fmt.Print("Masukkan nama klub B: ")
+	fmt.Scanln(&klubB)
+
+	// Loop untuk input skor
+	for {
+		fmt.Printf("Masukkan skor untuk %s dan %s : ", klubA, klubB)
+		_, err := fmt.Scanf("%d %d\n", &skorA, &skorB)
+
+		// Cek jika input tidak valid
+		if err != nil {
+			fmt.Println("Input tidak valid. Pastikan untuk memasukkan dua angka.")
+			// Mengosongkan input buffer
+			var dummy string
+			fmt.Scanln(&dummy)
+			continue
+		}
+
+		// Break loop jika salah satu skor negatif
+		if skorA < 0 || skorB < 0 {
+			break
+		}
+
+		// Tentukan hasil pertandingan
+		if skorA > skorB {
+			hasil = append(hasil, klubA) // klubA menang
+		} else if skorA < skorB {
+			hasil = append(hasil, klubB) // klubB menang
+		} else {
+			hasil = append(hasil, "Draw") // seri
+		}
+	}
+
+	// Tampilkan hasil
+	fmt.Println("Hasil pertandingan:")
+	for i, h := range hasil {
+		fmt.Printf("Hasil %d: %s\n", i+1, h)
+	}
+	fmt.Println("Pertandingan selesai")
+}
+```
+
+### Output:
+![image](https://github.com/user-attachments/assets/339e6f5c-6299-4cb0-aca4-0f8fde334996)
+
+### Full code Screenshot :
+![carbon (24)](https://github.com/user-attachments/assets/6a7f4691-1514-43ee-89a7-460c314bdad2)
+
+### Deskripsi Program : 
+Program ini memungkinkan pengguna untuk memasukkan hasil pertandingan antara dua klub sepak bola dan menentukan pemenang berdasarkan skor yang dimasukkan. Pengguna diminta untuk menginput nama kedua klub dan skor mereka secara berulang sampai salah satu skor bernilai negatif. Program kemudian memeriksa skor untuk menentukan siapa yang menang, jika ada, atau mencatat hasil sebagai "Draw" jika kedua klub memiliki skor yang sama. Semua hasil pertandingan disimpan dalam sebuah slice dan ditampilkan setelah input selesai. Program menggunakan validasi input untuk memastikan hanya angka yang dimasukkan sebagai skor.
+
+### Algoritma Program :
+1. Inisialisasi Variabel:
+   - Deklarasikan variabel klubA, klubB untuk nama klub.
+   - Deklarasikan variabel skorA, skorB untuk skor pertandingan.
+   - Deklarasikan slice hasil untuk menyimpan hasil pertandingan.
+
+2. Input Nama Klub:
+   - Input nama klub A dan B.
+   - Loop untuk Input Skor:
+     - Lakukan loop untuk meminta input skor secara berulang.
+     - Cek jika input skor valid (dua angka). Jika tidak, tampilkan pesan kesalahan dan lanjutkan ke input berikutnya.
+     - Jika salah satu skor negatif, break dari loop.
+
+3. Menentukan Hasil Pertandingan:
+   - Jika skor A lebih besar dari skor B, tambahkan klub A ke slice hasil.
+   - Jika skor B lebih besar dari skor A, tambahkan klub B ke slice hasil.
+   - Jika skor A sama dengan skor B, tambahkan "Draw" ke slice hasil.
+
+4. Menampilkan Hasil:
+   - Tampilkan hasil pertandingan dari slice hasil.
+
+5. Program Selesai:
+   - Program selesai dan keluar setelah menampilkan semua hasil.
+
+### Cara Kerja Program :
+1. Input Nama Klub:
+   - Program pertama-tama meminta pengguna untuk memasukkan nama klub A dan klub B yang akan bertanding.
+
+2. Input Skor Pertandingan:
+   - Program memasuki loop untuk meminta pengguna memasukkan skor pertandingan antara klub A dan klub B. Pengguna diminta untuk memasukkan dua angka (skor untuk masing-masing klub) untuk setiap pertandingan.
+
+3. Validasi Input:
+   - Program memeriksa apakah input berupa dua angka. Jika input tidak valid (misalnya bukan angka), program menampilkan pesan kesalahan dan meminta input ulang.
+
+4. Menentukan Hasil Pertandingan:
+   - Jika skor klub A lebih besar dari klub B, maka klub A dianggap menang dan ditambahkan ke dalam slice hasil.
+   - Jika skor klub B lebih besar dari klub A, maka klub B dianggap menang dan ditambahkan ke dalam slice hasil.
+   - Jika skor kedua klub sama, maka hasilnya adalah "Draw" yang juga ditambahkan ke dalam slice hasil.
+
+5. Penghentian Input:
+   - Program akan berhenti meminta input saat salah satu skor yang dimasukkan bernilai negatif. Ketika hal ini terjadi, loop berhenti dan program melanjutkan untuk menampilkan hasil.
+
+6. Menampilkan Hasil:
+   - Setelah loop berhenti, program menampilkan hasil dari setiap pertandingan yang telah dimasukkan, baik itu kemenangan klub A, kemenangan klub B, atau hasil seri.
 
 ### 4. Sebuah array digunakan untuk menampung sekumpulan karakter, Anda diminta untuk membuat sebuah subprogram untuk melakukan membalikkan urutan isi array dan memeriksa apakah membentuk palindrom. 
 
@@ -707,18 +1073,170 @@ func tampilkanFrekuensi(array []int, n int) {
 
 ### Source Code :
 ```go
+// Caroline Carren
+// 2311102174
+// S1 IF 11 5
+
+package main
+
+import "fmt"
+
+const NMAX int = 127 // Konstanta untuk batas maksimum jumlah karakter dalam array
+
+// Tipe data tabel adalah array yang menampung hingga 127 karakter bertipe rune (karakter Unicode)
+type tabel [NMAX]rune
+
+// Fungsi untuk mengisi array dengan karakter-karakter yang dimasukkan oleh pengguna
+func isiArray(t *tabel, n int) {
+	/* I.S. Data tersedia dalam piranti masukan
+	   F.S. Array t berisi sejumlah n karakter yang dimasukkan user,
+	   Proses input berhenti jika karakter yang dimasukkan adalah TITIK ('.') dan n <= NMAX */
+	var i int
+	var karakter rune
+	fmt.Println("Masukkan karakter : ")
+	for i = 0; i < n; i++ {
+		// Memasukkan karakter satu per satu
+		fmt.Scanf("%c", &karakter)
+		// Jika karakter yang dimasukkan adalah titik, berhenti memasukkan data
+		if karakter == '.' {
+			break
+		}
+		// Menyimpan karakter ke dalam array
+		t[i] = karakter
+	}
+}
+
+// Fungsi untuk mencetak seluruh isi array ke layar
+func cetakArray(t tabel, n int) {
+	/* I.S. Terdefinisi array t yang berisi sejumlah n karakter
+	   F.S. n karakter dalam array muncul di layar */
+	for i := 0; i < n; i++ {
+		// Mencetak karakter satu per satu
+		fmt.Printf("%c", t[i])
+	}
+	// Menambahkan baris baru setelah mencetak karakter
+	fmt.Println()
+}
+
+// Fungsi untuk membalikkan urutan karakter dalam array
+func balikanArray(t *tabel, n int) {
+	/* I.S. Terdefinisi array t yang berisi sejumlah n karakter
+	   F.S. Urutan isi array t terbalik */
+	for i := 0; i < n/2; i++ {
+		// Menyimpan nilai sementara untuk pertukaran
+		temp := t[i]
+		// Melakukan pertukaran posisi karakter
+		t[i] = t[n-i-1]
+		t[n-i-1] = temp
+	}
+}
+
+// Fungsi untuk memeriksa apakah array membentuk palindrom
+func palindrom(t tabel, n int) bool {
+	/* Mengembalikan true apabila susunan karakter di dalam t membentuk palindrom,
+	   dan false apabila sebaliknya. Petunjuk: Manfaatkan prosedur balikanArray */
+	var t2 tabel
+	// Menyalin array t ke array t2
+	copy(t2[:], t[:])
+	// Membalikkan array t2
+	balikanArray(&t2, n)
+
+	// Memeriksa apakah array t dan t2 sama
+	for i := 0; i < n; i++ {
+		if t2[i] != t[i] {
+			// Jika ada perbedaan, berarti bukan palindrom
+			return false
+		}
+	}
+	// Jika semua elemen sama, berarti palindrom
+	return true
+}
+
+func main() {
+	// Deklarasi array untuk menyimpan karakter dan jumlah elemen
+	var tab tabel
+	var n int
+	// Meminta pengguna untuk memasukkan jumlah karakter
+	fmt.Println("Masukkan jumlah karakter : ")
+	fmt.Scanln(&n)
+	// Mengisi array dengan karakter-karakter yang dimasukkan
+	isiArray(&tab, n)
+	// Menampilkan karakter-karakter yang dimasukkan
+	fmt.Println("Karakter yang dimasukkan adalah:")
+	cetakArray(tab, n)
+
+	// Memeriksa apakah array membentuk palindrom
+	if palindrom(tab, n) {
+		// Jika ya, tampilkan pesan palindrom
+		fmt.Println("Array ini adalah palindrom.")
+	} else {
+		// Jika tidak, tampilkan pesan bukan palindrom
+		fmt.Println("Array ini bukan palindrom.")
+	}
+}
 ```
+
 ### Output:
+![image](https://github.com/user-attachments/assets/e2212e65-cd4c-4d46-bc77-796124d3da62)
+
 ### Full code Screenshot :
+![carbon (25)](https://github.com/user-attachments/assets/b93751ff-75fb-472a-9e51-c3d5055be70c)
+
 ### Deskripsi Program : 
+Program ini digunakan untuk memeriksa apakah urutan karakter yang dimasukkan oleh pengguna membentuk sebuah palindrom. Pengguna diminta untuk memasukkan jumlah karakter yang ingin mereka masukkan, kemudian memasukkan karakter-karakter tersebut satu per satu. Setelah karakter dimasukkan, program akan menampilkan karakter-karakter tersebut, membalik urutan karakter, dan memeriksa apakah urutan karakter tersebut membentuk palindrom.
+
 ### Algoritma Program :
+1. Deklarasi Variabel:
+   - tabel adalah tipe data array yang menampung hingga 127 karakter (rune).
+   - tab adalah array yang akan digunakan untuk menyimpan karakter-karakter yang dimasukkan pengguna.
+   - n adalah jumlah karakter yang dimasukkan pengguna.
+
+2. Fungsi isiArray:
+   - Fungsi ini meminta pengguna memasukkan karakter-karakter.
+   - Karakter dimasukkan satu per satu menggunakan fmt.Scanf("%c", &karakter).
+   - Input berhenti ketika titik (.) dimasukkan atau jika jumlah karakter sudah mencapai batas yang ditentukan.
+
+3. Fungsi cetakArray:
+   - Fungsi ini mencetak seluruh karakter yang ada dalam array ke layar.
+
+4. Fungsi balikanArray:
+   - Fungsi ini membalikkan urutan karakter dalam array dengan metode pertukaran elemen (swapping).
+   - Untuk membalik array, pertukaran dilakukan antara elemen di posisi i dan n-i-1 hingga mencapai tengah array.
+
+5. Fungsi palindrom:
+   - Fungsi ini memeriksa apakah urutan karakter dalam array membentuk palindrom.
+   - Fungsi pertama menyalin array t ke dalam array t2.
+   - Kemudian, array t2 dibalik menggunakan fungsi balikanArray.
+   - Setelah itu, array t2 dibandingkan dengan array t untuk memeriksa kesamaan setiap elemen. Jika semua elemen sama, maka array membentuk palindrom.
+
+6. Program Utama (main):
+   - Program meminta input jumlah karakter, kemudian mengisi array dengan karakter-karakter yang dimasukkan oleh pengguna.
+   - Karakter yang dimasukkan kemudian ditampilkan di layar.
+   - Setelah itu, program memeriksa apakah urutan karakter tersebut membentuk palindrom dan menampilkan hasilnya.
+
 ### Cara Kerja Program :
+1. Input Jumlah Karakter:
+   - Program meminta pengguna untuk memasukkan jumlah karakter yang ingin dimasukkan ke dalam array, yang dibatasi hingga 127 karakter (tergantung nilai konstanta NMAX).
 
+2. Input Karakter:
+   - Program meminta pengguna untuk memasukkan karakter satu per satu. Input berhenti jika pengguna memasukkan titik (.) atau jika jumlah karakter yang dimasukkan mencapai batas maksimum.
 
+3. Menampilkan Karakter:
+   - Setelah semua karakter dimasukkan, program akan menampilkan urutan karakter yang telah dimasukkan oleh pengguna.
 
+4. Memeriksa Palindrom:
+   - Program akan membalik urutan karakter dalam array dan memeriksa apakah array yang dibalik sama dengan array asli.
+   - Jika sama, berarti urutan karakter membentuk palindrom. Jika tidak, berarti bukan palindrom.
 
+5. Output Hasil:
+   - Program akan mencetak apakah urutan karakter yang dimasukkan membentuk palindrom atau tidak.
 
 ## Kesimpulan 
+Berdasarkan hasil praktikum, dapat disimpulkan bahwa:
+1. Praktikum ini memberikan pemahaman tentang penggunaan array untuk menyimpan dan mengelola sejumlah data dalam program. Array memudahkan pengelolaan data yang memiliki tipe sama dalam satu wadah.
+2. Dengan menggunakan struktur data seperti array dan tipe data custom (seperti struktur), kita dapat menangani data yang lebih kompleks dan mengorganisirnya dengan lebih baik dalam program.
+3. Dalam praktikum, kita belajar bagaimana mengelola input dari pengguna untuk mengisi array, serta cara menangani input yang tidak valid menggunakan pemeriksaan error.
+   
 ## Daftar Pustaka
 
 [1] A. A. A. Donovan and B. W. Kernighan, *The Go Programming Language*. Boston, MA: Addison-Wesley, 2015.
