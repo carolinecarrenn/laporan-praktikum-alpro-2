@@ -367,13 +367,13 @@ package main
 
 import "fmt"
 
-// Fungsi Selection Sort untuk mengurutkan angka dalam urutan tertentu
-func selectionSort(arr []int, ascending bool) {
+// Fungsi untuk mengurutkan array dengan selection sort
+func selectionSort(arr []int, asc bool) {
 	n := len(arr)
 	for i := 0; i < n-1; i++ {
 		idx := i
 		for j := i + 1; j < n; j++ {
-			if (ascending && arr[j] < arr[idx]) || (!ascending && arr[j] > arr[idx]) {
+			if (asc && arr[j] < arr[idx]) || (!asc && arr[j] > arr[idx]) {
 				idx = j
 			}
 		}
@@ -381,71 +381,109 @@ func selectionSort(arr []int, ascending bool) {
 	}
 }
 
-// Fungsi untuk memisahkan dan mengurutkan nomor ganjil dan genap
-func pisahDanUrutkan(arr []int) ([]int, []int) {
-	var ganjil, genap []int
-	for _, num := range arr {
-		if num%2 == 0 {
-			genap = append(genap, num)
-		} else {
-			ganjil = append(ganjil, num)
-		}
-	}
+// Kode warna untuk terminal
+const (
+	red     = "\033[31m"
+	green   = "\033[32m"
+	yellow  = "\033[33m"
+	blue    = "\033[34m"
+	magenta = "\033[35m"
+	cyan    = "\033[36m"
+	reset   = "\033[0m"
+)
 
-	// Urutkan ganjil membesar dan genap mengecil
-	selectionSort(ganjil, true)  // Ganjil membesar
-	selectionSort(genap, false) // Genap mengecil
-
-	return ganjil, genap
+// Fungsi untuk mencetak garis batas panjang
+func printSeparator() {
+	fmt.Println("\n" + cyan + "=================================================" + reset)
 }
 
-func main() {
-	fmt.Println("===== Program Pengurutan Nomor Rumah =====")
+func printDashedSeparator() {
+	fmt.Println(yellow + "-------------------------------------------------" + reset)
+}
 
+func printDoubleDashedSeparator() {
+	fmt.Println(magenta + "*************************************************" + reset)
+}
+
+// Fungsi untuk menampilkan nomor rumah berdasarkan daerah
+func processDaerah(i, m int) ([]int, []int) {
+	var arr = make([]int, m)
+	// Input nomor rumah kerabat untuk setiap daerah
+	fmt.Printf(cyan+"Masukkan %d nomor rumah kerabat untuk daerah ke-%d: "+reset, m, i+1)
+	for j := 0; j < m; j++ {
+		fmt.Scan(&arr[j])
+	}
+
+	// Memisahkan nomor ganjil dan genap
+	var odd, even []int
+	for _, num := range arr {
+		if num%2 == 0 {
+			even = append(even, num)
+		} else {
+			odd = append(odd, num)
+		}
+	}
+	return odd, even
+}
+
+// Fungsi untuk menampilkan hasil terurut
+func printSortedResults(i int, odd, even []int) {
+	// Mengurutkan nomor rumah
+	selectionSort(odd, true)   // urutkan ganjil secara menaik
+	selectionSort(even, false) // urutkan genap secara menurun
+
+	// Output nomor rumah yang terurut
+	printDoubleDashedSeparator()
+	fmt.Printf(magenta+"\nNomor rumah terurut untuk daerah ke-%d:\n"+reset, i+1)
+
+	// Tampilkan nomor ganjil
+	fmt.Print(green)
+	for _, num := range odd {
+		fmt.Printf("%d ", num)
+	}
+
+	// Tampilkan nomor genap
+	fmt.Print(blue)
+	for _, num := range even {
+		fmt.Printf("%d ", num)
+	}
+	fmt.Println(reset)
+}
+
+// Fungsi utama program
+func main() {
 	var n int
-	fmt.Print("Masukkan jumlah daerah: ")
+	// Input jumlah daerah kerabat
+	printSeparator()
+	fmt.Print(green + "Masukkan jumlah daerah kerabat (n): " + reset)
 	fmt.Scan(&n)
 
-	if n <= 0 {
-		fmt.Println("Jumlah daerah harus lebih besar dari 0.")
-		return
-	}
-
-	for i := 1; i <= n; i++ {
-		fmt.Printf("\n-- Daerah ke-%d --\n", i)
-
+	// Proses untuk setiap daerah
+	for i := 0; i < n; i++ {
 		var m int
-		fmt.Print("Masukkan jumlah rumah: ")
+		// Input jumlah rumah kerabat untuk setiap daerah
+		printDashedSeparator()
+		fmt.Printf(yellow+"Masukkan jumlah rumah kerabat di daerah ke-%d (m): "+reset, i+1)
 		fmt.Scan(&m)
 
-		if m <= 0 {
-			fmt.Println("Jumlah rumah harus lebih besar dari 0.")
-			continue
-		}
+		// Ambil nomor rumah untuk daerah tersebut
+		odd, even := processDaerah(i, m)
 
-		// Input nomor rumah
-		arr := make([]int, m)
-		fmt.Printf("Masukkan %d nomor rumah (pisahkan dengan spasi): ", m)
-		for j := range arr {
-			fmt.Scan(&arr[j])
-		}
+		// Menampilkan hasil terurut untuk daerah tersebut
+		printSortedResults(i, odd, even)
 
-		// Pisah dan urutkan nomor rumah
-		ganjil, genap := pisahDanUrutkan(arr)
-
-		// Tampilkan hasil
-		fmt.Printf("Nomor rumah terurut: Ganjil (%v) + Genap (%v)\n", ganjil, genap)
+		// Cetak garis pemisah untuk setiap daerah
+		printDashedSeparator()
 	}
-
-	fmt.Println("\n===== Program Selesai =====")
 }
 ```
 
 ### Output:
-![image](https://github.com/user-attachments/assets/16b423ad-0423-4d06-b855-5f26d1d730a3)
+![image](https://github.com/user-attachments/assets/1a529f6e-a90a-4d4d-ba91-728966863d8a)
 
 ### Full code Screenshot :
-![carbon (7)](https://github.com/user-attachments/assets/bc2d54c8-b624-45ed-8832-4e7bdc55ca08)
+![carbon (11)](https://github.com/user-attachments/assets/83e5c85b-4bde-45dc-bad6-6c52dbb66868)
+
 
 ### Deskripsi Program : 
 Program ini mengelola dan mengurutkan nomor rumah di beberapa daerah berdasarkan kategori ganjil dan genap. Pengguna diminta memasukkan jumlah daerah dan jumlah rumah di setiap daerah, kemudian menginputkan nomor rumah untuk masing-masing daerah. Nomor rumah yang ganjil diurutkan secara membesar (ascending), sedangkan nomor rumah genap diurutkan secara mengecil (descending) menggunakan algoritma Selection Sort. Program memisahkan hasil pengurutan ke dalam dua kelompok (ganjil dan genap) dan menampilkan hasil pengurutan untuk setiap daerah. Program memastikan validitas input, seperti jumlah daerah dan rumah harus lebih besar dari nol.
