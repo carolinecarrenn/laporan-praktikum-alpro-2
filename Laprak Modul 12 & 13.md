@@ -821,15 +821,19 @@ func main() {
 ```
 ### Output:
 Tampilan Inputan Buku:
+
 ![image](https://github.com/user-attachments/assets/617cf974-d0f7-4914-b56d-379d6cfae8ed)
 
 Tampilan Buku Terfavorite:
+
 ![image](https://github.com/user-attachments/assets/62bfe7c1-47aa-4252-bf7d-8d1e01a1a371)
 
 Tampilan 5 Buku Dengan Rating Tertinggi:
+
 ![image](https://github.com/user-attachments/assets/b1aa770b-7270-4282-bda7-3e85b3f1fccd)
 
 Tampilan Mencari Buku Dengan Rating:
+
 ![image](https://github.com/user-attachments/assets/c1423ba9-690c-43d5-a568-73122dd110ca)
 
 ### Full code Screenshot :
